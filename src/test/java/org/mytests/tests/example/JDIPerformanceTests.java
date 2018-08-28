@@ -20,6 +20,7 @@ public class JDIPerformanceTests extends SimpleTestsInit {
     @Test
     public void hugeTableTest() {
         StopWatch timer = StopWatch.createStarted();
+        jdiPerformancePage.table.
         String row = jdiPerformancePage.getUser("Meyer", "co.uk").getText();
         System.out.println("Time: " + timer.getTime());
         Assert.assertEquals(row, "Brian Meyer (016977) 0358 mollis.nec@seddictumeleifend.co.uk Houston");

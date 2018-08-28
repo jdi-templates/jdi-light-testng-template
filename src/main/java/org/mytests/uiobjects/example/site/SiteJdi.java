@@ -10,7 +10,7 @@ import org.mytests.uiobjects.example.site.sections.LoginForm;
 import org.openqa.selenium.WebElement;
 import ru.yandex.qatools.allure.annotations.Step;
 
-@JSite("https://epam.github.io/JDI/")
+//@JSite("https://epam.github.io/JDI/")
 public class SiteJdi {
     public static HomePage homePage;
     public static JDIPerformancePage jdiPerformancePage;

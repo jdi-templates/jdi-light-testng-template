@@ -1,10 +1,11 @@
 package org.mytests.uiobjects.example.site.pages;
 
 import com.epam.jdi.light.elements.base.UIElement;
+import com.epam.jdi.light.elements.complex.UIList;
 import com.epam.jdi.light.elements.complex.WebList;
+import com.epam.jdi.light.elements.complex.table.FastTable;
 import com.epam.jdi.light.elements.composite.WebPage;
-import com.epam.jdi.light.elements.pageobjects.annotations.FindBy;
-import com.epam.jdi.light.elements.pageobjects.annotations.JPage;
+import com.epam.jdi.light.elements.pageobjects.annotations.Url;
 import com.epam.jdi.light.elements.pageobjects.annotations.simple.Css;
 import com.epam.jdi.light.elements.pageobjects.annotations.simple.XPath;
 import org.openqa.selenium.By;
@@ -12,11 +13,11 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-@JPage(url = "/performance.html")
+@Url("/performance.html")
 public class JDIPerformancePage extends WebPage {
     //Table
-    @Css("#users-table") public WebElement table;
-
+    @Css("#users-table") public FastTable table;
+/*
     public WebElement getUser(String name, String email) {
         List<WebElement> rows = table.findElements(By.tagName("tr"));
         for (WebElement row : rows) {
@@ -27,7 +28,7 @@ public class JDIPerformancePage extends WebPage {
         }
         return null;
     }
-
+*/
     // Dropdown
     @Css("#user-names option")
     public WebList names;
