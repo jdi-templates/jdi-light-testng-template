@@ -5,21 +5,22 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.epam.jdi</groupId>
-    <artifactId>jdi-light-testng-template</artifactId>
+    <artifactId>jdi-testng-template</artifactId>
     <version>1.0</version>
-    <name>JDI Test project Template</name>
+    <name>Test Automation project template</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <aspectj.version>1.8.5</aspectj.version>
         <driver>chrome</driver>
+        <domain>https://epam.github.io/JDI/</domain>
     </properties>
 
     <dependencies>
         <!--JDI-->
         <dependency>
             <groupId>com.epam.jdi</groupId>
-            <artifactId>jdi-light</artifactId>
+            <artifactId>jdi-light-html</artifactId>
             <version>RELEASE</version>
         </dependency>
 		
@@ -27,7 +28,7 @@
         <dependency>
             <groupId>ru.yandex.qatools.allure</groupId>
             <artifactId>allure-testng-adaptor</artifactId>
-            <version>LATEST</version>
+            <version>RELEASE</version>
         </dependency>
     </dependencies>
 
