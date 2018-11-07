@@ -12,8 +12,8 @@ import static com.epam.jdi.light.elements.complex.table.TableMatchers.containsVa
 import static org.mytests.tests.preconditions.Preconditions.shouldBeLoggedIn;
 import static org.mytests.uiobjects.example.TestData.TABLE_SNAPSHOOT;
 import static org.mytests.uiobjects.example.entities.Defaults.DEFAULT_CONTACTS;
-import static org.mytests.uiobjects.example.site.SiteJdi.*;
 import static org.mytests.uiobjects.example.site.SiteJdi.contactFormPage;
+import static org.mytests.uiobjects.example.site.SiteJdi.performancePage;
 import static org.mytests.uiobjects.example.site.pages.ContactFormPage.contactForm;
 import static org.mytests.uiobjects.example.site.pages.JDIPerformancePage.*;
 
