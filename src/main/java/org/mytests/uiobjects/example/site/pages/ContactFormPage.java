@@ -9,5 +9,4 @@ import org.mytests.uiobjects.example.site.sections.ContactPage;
 @Url("/contacts.html") @Title("Contact Form")
 public class ContactFormPage extends WebPage {
 	@Css("form#contact-form") public static ContactPage contactForm;
-
 }
