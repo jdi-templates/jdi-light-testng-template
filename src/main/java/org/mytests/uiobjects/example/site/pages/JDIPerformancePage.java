@@ -1,47 +1,19 @@
 package org.mytests.uiobjects.example.site.pages;
 
-import com.epam.jdi.light.elements.base.UIElement;
-import com.epam.jdi.light.elements.complex.UIList;
-import com.epam.jdi.light.elements.complex.WebList;
 import com.epam.jdi.light.elements.complex.table.FastTable;
 import com.epam.jdi.light.elements.composite.WebPage;
 import com.epam.jdi.light.elements.pageobjects.annotations.Url;
-import com.epam.jdi.light.elements.pageobjects.annotations.simple.Css;
-import com.epam.jdi.light.elements.pageobjects.annotations.simple.XPath;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
-import java.util.List;
+import com.epam.jdi.light.ui.html.common.TextArea;
+import com.epam.jdi.light.ui.html.complex.Dropdown;
 
 @Url("/performance.html")
 public class JDIPerformancePage extends WebPage {
-    //Table
-    @Css("#users-table") public FastTable table;
-/*
-    public WebElement getUser(String name, String email) {
-        List<WebElement> rows = table.findElements(By.tagName("tr"));
-        for (WebElement row : rows) {
-            List<WebElement> columns = row.findElements(By.tagName("td"));
-            if (columns.size() == 4 && columns.get(0).getText().contains(name) &&
-                columns.get(2).getText().contains(email))
-                return row;
-        }
-        return null;
-    }
-*/
-    // Dropdown
-    @Css("#user-names option")
-    public WebList names;
-    @XPath("//*[@id='user-names']//*[text()='%s']")
-    public UIElement namesDropdown;
-    @Css("select[ui=dropdown]") WebElement dropdownValue;
-    @Css("#user-names option") List<WebElement> dropdown;
+    // @Css("#users-table")
+    public static FastTable usersTable;
 
-    public String isSelected() {
-        return dropdownValue.getText();
-    }
+    // @Css("#user-names")
+    public static Dropdown userNames;
 
-    // Textfield
-    @Css("#textarea-performance")
-    public UIElement textfield;
+    //@Css("#textarea-performance")
+    public static TextArea textareaPerformance;
 }

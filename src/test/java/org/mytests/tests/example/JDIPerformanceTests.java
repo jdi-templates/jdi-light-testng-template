@@ -1,38 +1,60 @@
 package org.mytests.tests.example;
 
+import com.epam.jdi.light.elements.complex.table.Line;
 import org.apache.commons.lang3.time.StopWatch;
-import org.mytests.uiobjects.example.entities.User;
+import org.mytests.tests.SimpleTestsInit;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static org.mytests.uiobjects.example.site.SiteJdi.*;
+import static com.epam.jdi.light.elements.complex.table.Column.inColumn;
+import static com.epam.jdi.light.elements.complex.table.TableMatchers.containsValue;
+import static org.mytests.tests.preconditions.Preconditions.shouldBeLoggedIn;
+import static org.mytests.uiobjects.example.TestData.TABLE_SNAPSHOOT;
+import static org.mytests.uiobjects.example.entities.Defaults.DEFAULT_CONTACT;
+import static org.mytests.uiobjects.example.site.SiteJdi.contactFormPage;
+import static org.mytests.uiobjects.example.site.SiteJdi.performancePage;
+import static org.mytests.uiobjects.example.site.pages.ContactFormPage.contactForm;
+import static org.mytests.uiobjects.example.site.pages.JDIPerformancePage.*;
 
 public class JDIPerformanceTests extends SimpleTestsInit {
 
     @BeforeMethod
     public void openPerformancePage() {
-        homePage.open();
-        login(new User());
-        navigation.select("Performance");
+        shouldBeLoggedIn();
+        performancePage.shouldBeOpened();
     }
 
     @Test
-    public void hugeTableTest() {
+    public void hugeTableSearchTest() {
         StopWatch timer = StopWatch.createStarted();
-        jdiPerformancePage.table.
-        String row = jdiPerformancePage.getUser("Meyer", "co.uk").getText();
-        System.out.println("Time: " + timer.getTime());
-        Assert.assertEquals(row, "Brian Meyer (016977) 0358 mollis.nec@seddictumeleifend.co.uk Houston");
+        /*usersTable.assertThat().hasRowWithValues(
+            containsValue("Meyer", inColumn("Name")),
+            containsValue("co.uk", inColumn("Email")));
+        */
+        Line row = usersTable.row(
+            containsValue("Meyer", inColumn("Name")),
+            containsValue("co.uk", inColumn("Email")));
+        System.out.println("Huge table search test Time: " + timer.getTime());
+        Assert.assertEquals(row.getValue(),
+        "Brian Meyer,(016977) 0358,mollis.nec@seddictumeleifend.co.uk,Houston");
+    }
+
+    @Test
+    public void hugeTableValidateTest() {
+        StopWatch timer = StopWatch.createStarted();
+        String actualTable = usersTable.preview();
+        System.out.println("Huge table validate test Time: " + timer.getTime());
+        Assert.assertEquals(actualTable, TABLE_SNAPSHOOT);
     }
 
     @Test
     public void bigDropdownTest() {
         String name = "Charles Byers";
         StopWatch timer = StopWatch.createStarted();
-        jdiPerformancePage.names.select(name);
-        System.out.println("Time: " + timer.getTime());
-        Assert.assertEquals(jdiPerformancePage.isSelected(), name);
+        userNames.select(name);
+        System.out.println("Big dropdown test Time: " + timer.getTime());
+        Assert.assertEquals(userNames.selected(), name);
     }
 
     @Test
@@ -43,7 +65,7 @@ public class JDIPerformanceTests extends SimpleTestsInit {
                 "Has eirmod consequat ad. Sea illud clita ut, has quando accusata cotidieque an, volutpat iudicabit definitionem ut sea. Pri at atqui molestiae, nibh ullum consulatu vix at. Nec id nisl nonumes epicurei, et vitae possit probatus ius. Fierent delicata argumentum ut quo. Tation tincidunt sed eu, sit in nostrud democritum.\\n\\n" +
                 "Usu esse utroque sapientem ad. Eam ut consul soleat sapientem, cu dolor consequuntur vis. Erat temporibus mea id, has ex dicam tritani. Pertinacia expetendis consectetuer eos ei, vidit malis periculis est ea, ne nam movet fuisset. Pro id habemus definitiones, in ferri solum reprehendunt mei. Vel eligendi honestatis liberavisse id.";
         StopWatch timer = StopWatch.createStarted();
-        jdiPerformancePage.textfield.setText(text + "\\n"+ text);
-        System.out.println("Time: " + timer.getTime());
+        textareaPerformance.setText(text + "\\n"+ text);
+        System.out.println("Long text test Time: " + timer.getTime());
     }
 }
