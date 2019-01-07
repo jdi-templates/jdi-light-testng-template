@@ -1,5 +1,6 @@
 package org.mytests.uiobjects.example.site;
 
+import com.epam.jdi.light.elements.base.UIElement;
 import com.epam.jdi.light.elements.complex.WebList;
 import com.epam.jdi.light.elements.composite.Form;
 import com.epam.jdi.light.elements.composite.WebPage;
@@ -21,7 +22,7 @@ public class SiteJdi {
     public static Html5Page html5Page;
     @Css("form") public static Form<User> loginForm;
 
-    @Css(".profile-photo [ui=label]") public static WebElement userName;
+    @Css(".profile-photo [ui=label]") public static UIElement userName;
     @Css(".fa-sign-out") public static WebElement logout;
     @Css("img#user-icon") public static WebElement userIcon;
     @UI(".sidebar-menu span") public static Menu leftMenu;
