@@ -27,31 +27,4 @@ public class SiteJdi {
     @Css("img#user-icon") public static WebElement userIcon;
     @UI(".sidebar-menu span") public static Menu leftMenu;
 
-    @Css(".sidebar-menu [ui=label]")
-    public static WebList navigation;
-
-    @Step
-    public static void shouldBeLoggedIn() {
-        if (!WebPage.getUrl().contains("https://epam.github.io/JDI/"))
-            homePage.open();
-        if (!userName.isDisplayed())
-            login();
-    }
-    @Step
-    public static void login() {
-        userIcon.click();
-        loginForm.submit(new User(), "enter");
-    }
-    @Step
-    public static void shouldBeLoggedOut() {
-        if (!WebPage.getUrl().contains("https://epam.github.io/JDI/"))
-            homePage.open();
-        if (userName.isDisplayed())
-            logout();
-    }
-    @Step
-    public static void logout() {
-        userIcon.click();
-        logout.click();
-    }
 }
