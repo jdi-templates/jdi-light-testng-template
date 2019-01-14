@@ -1,13 +1,10 @@
 package org.mytests.uiobjects.example.site;
 
 import com.epam.jdi.light.elements.base.UIElement;
-import com.epam.jdi.light.elements.complex.WebList;
 import com.epam.jdi.light.elements.composite.Form;
-import com.epam.jdi.light.elements.composite.WebPage;
 import com.epam.jdi.light.elements.pageobjects.annotations.simple.Css;
 import com.epam.jdi.light.elements.pageobjects.annotations.simple.UI;
 import com.epam.jdi.light.ui.html.complex.Menu;
-import io.qameta.allure.Step;
 import org.mytests.uiobjects.example.entities.User;
 import org.mytests.uiobjects.example.site.pages.*;
 import org.openqa.selenium.WebElement;
