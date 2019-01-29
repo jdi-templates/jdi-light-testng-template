@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static com.epam.jdi.light.elements.complex.table.Column.inColumn;
-import static com.epam.jdi.light.elements.complex.table.TableMatchers.containsValue;
+import static com.epam.jdi.light.elements.complex.table.TableMatcher.containsValue;
 import static org.mytests.tests.preconditions.Preconditions.shouldBeLoggedIn;
 import static org.mytests.uiobjects.example.TestData.TABLE_SNAPSHOOT;
 import static org.mytests.uiobjects.example.site.SiteJdi.performancePage;
@@ -24,17 +24,17 @@ public class JDIPerformanceTests extends SimpleTestsInit {
 
     @Test
     public void hugeTableSearchTest() {
-        StopWatch timer = StopWatch.createStarted();
-        /*usersTable.assertThat().hasRowWithValues(
+        usersTable.assertThat().hasRowWithValues(
             containsValue("Meyer", inColumn("Name")),
             containsValue("co.uk", inColumn("Email")));
-        */
+
+        StopWatch timer = StopWatch.createStarted();
         Line row = usersTable.row(
             containsValue("Meyer", inColumn("Name")),
             containsValue("co.uk", inColumn("Email")));
         System.out.println("Huge table search test Time: " + timer.getTime());
         Assert.assertEquals(row.getValue(),
-        "Brian Meyer,(016977) 0358,mollis.nec@seddictumeleifend.co.uk,Houston");
+        "Brian Meyer;(016977) 0358;mollis.nec@seddictumeleifend.co.uk;Houston");
     }
 
     @Test
