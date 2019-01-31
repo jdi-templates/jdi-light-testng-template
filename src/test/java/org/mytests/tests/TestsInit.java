@@ -11,7 +11,7 @@ import static com.epam.jdi.light.settings.WebSettings.logger;
 import static com.epam.jdi.light.ui.html.PageFactory.initElements;
 import static org.mytests.uiobjects.example.site.SiteJdi.homePage;
 
-public class SimpleTestsInit {
+public class TestsInit {
     @BeforeSuite(alwaysRun = true)
     public static void setUp() {
         logger.setLogLevel(STEP);

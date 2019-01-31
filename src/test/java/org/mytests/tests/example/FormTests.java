@@ -1,6 +1,6 @@
 package org.mytests.tests.example;
 
-import org.mytests.tests.SimpleTestsInit;
+import org.mytests.tests.TestsInit;
 import org.mytests.tests.preconditions.Preconditions;
 import org.testng.annotations.Test;
 
@@ -9,7 +9,7 @@ import static org.mytests.uiobjects.example.entities.Defaults.DEFAULT_USER;
 import static org.mytests.uiobjects.example.site.SiteJdi.*;
 import static org.mytests.uiobjects.example.site.pages.ContactFormPage.contactForm;
 
-public class FormTests extends SimpleTestsInit {
+public class FormTests extends TestsInit {
 
     @Test
     public void loginTest() {

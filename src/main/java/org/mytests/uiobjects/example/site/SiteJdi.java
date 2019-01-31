@@ -3,6 +3,8 @@ package org.mytests.uiobjects.example.site;
 import com.epam.jdi.light.elements.base.UIElement;
 import com.epam.jdi.light.elements.complex.JList;
 import com.epam.jdi.light.elements.composite.Form;
+import com.epam.jdi.light.elements.pageobjects.annotations.Title;
+import com.epam.jdi.light.elements.pageobjects.annotations.Url;
 import com.epam.jdi.light.elements.pageobjects.annotations.simple.Css;
 import com.epam.jdi.light.elements.pageobjects.annotations.simple.UI;
 import com.epam.jdi.light.ui.html.complex.Menu;
@@ -19,6 +21,8 @@ public class SiteJdi {
     public static ContactsPage contactsPage;
     public static DatesPage datesPage;
     public static Html5Page html5Page;
+    public static UsersPage usersPage;
+
     @Css("form") public static Form<User> loginForm;
 
     @Css(".profile-photo [ui=label]") public static UIElement userName;

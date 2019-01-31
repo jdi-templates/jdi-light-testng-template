@@ -1,11 +1,10 @@
 package org.mytests.tests.example;
 
-import org.mytests.tests.SimpleTestsInit;
-import org.testng.annotations.Test;
+import org.mytests.tests.TestsInit;
 
 import static org.testng.Assert.assertTrue;
 
-public class RetryTests extends SimpleTestsInit {
+public class RetryTests extends TestsInit {
 /*
     int count = 0;
     @Test
