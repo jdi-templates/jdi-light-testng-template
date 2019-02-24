@@ -9,21 +9,19 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.*;
 import static org.mytests.tests.preconditions.Preconditions.shouldBeLoggedIn;
-import static org.mytests.uiobjects.example.TestData.HEROES_PREVIEW;
-import static org.mytests.uiobjects.example.TestData.HEROES_TABLE;
 import static org.mytests.uiobjects.example.TestData.SPIDER_MAN;
 import static org.mytests.uiobjects.example.site.SiteJdi.usersPage;
-import static org.mytests.uiobjects.example.site.pages.UsersPage.*;
+import static org.mytests.uiobjects.example.site.pages.UsersPage.users;
+import static org.mytests.uiobjects.example.site.pages.UsersPage.usersSetup;
 import static org.testng.Assert.assertEquals;
 
 public class DataTableTests extends TestsInit {
     @BeforeMethod
     public void before() {
         shouldBeLoggedIn();
-        usersPage.shouldBeOpened();
+        usersPage.open();
     }
 
     @Test
@@ -33,9 +31,17 @@ public class DataTableTests extends TestsInit {
         assertEquals(users.header(), asList("Number", "Type", "User", "Description"));
 
         String value = users.preview();
-        assertEquals(value, HEROES_PREVIEW);
+        assertEquals(value,
+                "Number Type User Desciption1  Admin User Manager RomanWolverineVip2  Admin User Manager Sergey IvanSpider ManVip3  Admin User Manager VladzimirPunisherVip4  Admin User Manager Helen BennettCaptain Americasome descriptionVip5  Admin User Manager Yoshi TannamuriCyclopesome descriptionVip6  Admin User Manager Giovanni RovelliHulksome descriptionVip");
         value = users.getValue();
-        assertEquals(value, HEROES_TABLE);
+        assertEquals(value,
+        "||X||Number|Type|User|Description||\r\n" +
+            "||1||1|Admin|Roman|Wolverine:VIP||\r\n" +
+            "||2||2|User|Sergey Ivan|Spider Man:Dude||\r\n" +
+            "||3||3|Manager|Vladzimir|Punisher:VIP||\r\n" +
+            "||4||4|User|Helen Bennett|Captain America\\nsome description:Dude||\r\n" +
+            "||5||5|User|Yoshi Tannamuri|Cyclope\\nsome description:Dude||\r\n" +
+            "||6||6|User|Giovanni Rovelli|Hulk\\nsome description:Dude||\r\n");
     }
     @Test
     public void filterDataTest() {
@@ -47,10 +53,24 @@ public class DataTableTests extends TestsInit {
         assertEquals(filteredData.size(), 1);
         assertEquals(filteredData.get(0), SPIDER_MAN);
     }
+    @Test
+    public void tableAssertsTest() {
+        users.is().displayed();
+        users.has().size(6);
+        users.assertThat().size(greaterThan(3));
+        users.is().size(lessThanOrEqualTo(6));
+        users.is().notEmpty();
+        users.has().row(d -> d.user.contains("Ivan"));
+        users.assertThat().allRows(d -> d.user.length() > 4);
+        users.assertThat().atLeast(3).rows(d -> d.type.contains("User"));
+        users.assertThat().exact(2).rows(d -> d.description.contains(":VIP"));
+        users.has().row(SPIDER_MAN);
+        users.assertThat().exact(1).rows(SPIDER_MAN);
+    }
 
     @Test
     public void filterLinesTest() {
-        MarvelUser line =  users.line(2);
+        MarvelUser line = users.line(2);
         validateUserRow(line);
         line = usersSetup.line("Sergey Ivan");
         validateUserRow(line);
@@ -60,6 +80,7 @@ public class DataTableTests extends TestsInit {
         List<MarvelUser> filteredData = users.lines(d -> d.user.contains("Ivan"));
         assertEquals(filteredData.size(), 1);
         validateUserRow(filteredData.get(0));
+        usersPage.open();
     }
 
     private void validateUserRow(MarvelUser line) {
@@ -67,9 +88,5 @@ public class DataTableTests extends TestsInit {
         assertEquals(line.type.getValue(), "Admin");
         line.type.select("User");
         line.number.assertThat().text(is("2"));
-        line.description.image.assertThat().src(containsString("spider"));
-        line.description.vip.check();
-        line.description.vip.is().selected();
-
     }
 }

@@ -24,7 +24,7 @@ public class MenuTests extends TestsInit {
         Preconditions.shouldBeLoggedIn();
         homePage.shouldBeOpened();
         menu.select(ContactForm);
-        assertEquals(menu.isSelected(), ContactForm.value);
+        assertEquals(menu.selected(), ContactForm.value);
         menu.select(Service, Dates);
         menu.is().selected(Dates.value);
         datesPage.checkOpened();

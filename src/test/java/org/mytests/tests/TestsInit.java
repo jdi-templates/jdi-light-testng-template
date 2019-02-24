@@ -1,9 +1,10 @@
 package org.mytests.tests;
 
-import com.epam.jdi.light.elements.complex.WebList;
 import org.mytests.uiobjects.example.site.SiteJdi;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+
+import java.util.UUID;
 
 import static com.epam.jdi.light.driver.WebDriverUtils.killAllSeleniumDrivers;
 import static com.epam.jdi.light.logger.LogLevels.STEP;

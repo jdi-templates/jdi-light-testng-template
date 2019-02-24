@@ -4,9 +4,10 @@ import org.mytests.uiobjects.example.entities.MarvelUserInfo;
 
 public class TestData {
     public static MarvelUserInfo SPIDER_MAN = new MarvelUserInfo().set(m -> {
-        m.user = "Sergey Ivan";
+        m.number = "2";
         m.type = "User";
-        m.description = "Spider Man";
+        m.user = "Sergey Ivan";
+        m.description = "Spider Man:Dude";
     });
 
     public static String HEROES_PREVIEW =
