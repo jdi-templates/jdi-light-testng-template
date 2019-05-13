@@ -21,7 +21,7 @@ public class TestNGListener implements IInvokedMethodListener {
         if (iInvokedMethod.isTestMethod()) {
             Method testMethod = iInvokedMethod.getTestMethod().getConstructorOrMethod().getMethod();
             if (testMethod.isAnnotationPresent(Test.class)) {
-                TEST_NAME = testMethod.getName();
+                TEST_NAME.set(testMethod.getName());
                 logger.step("");
                 logger.step("== Test '%s' started ==", TEST_NAME);
             }
