@@ -34,9 +34,14 @@ public class States {
         if (userName.isDisplayed())
             logout();
     }
+
     @Step
     public static void logout() {
-        userIcon.click();
+        if (!logout.isDisplayed()) {
+            userIcon.click();
+        }
         logout.click();
+        if (loginForm.displayed())
+            userIcon.click();
     }
 }
