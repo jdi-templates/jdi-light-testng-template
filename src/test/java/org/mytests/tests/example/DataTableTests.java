@@ -55,15 +55,13 @@ public class DataTableTests extends TestsInit {
     }
     @Test
     public void tableAssertsTest() {
-        users.is().displayed();
-        users.has().size(6);
+        users.is().displayed().size(6);
         users.assertThat().size(greaterThan(3));
-        users.is().size(lessThanOrEqualTo(6));
-        users.is().notEmpty();
-        users.has().row(d -> d.user.contains("Ivan"));
-        users.assertThat().allRows(d -> d.user.length() > 4);
-        users.assertThat().atLeast(3).rows(d -> d.type.contains("User"));
-        users.assertThat().exact(2).rows(d -> d.description.contains(":VIP"));
+        users.is().size(lessThanOrEqualTo(6))
+            .notEmpty().row(d -> d.user.contains("Ivan"));
+        users.assertThat().all().rows(d -> d.user.length() > 4);
+        users.has().atLeast(3).rows(d -> d.type.contains("User"))
+            .and().exact(2).rows(d -> d.description.contains(":VIP"));
         users.has().row(SPIDER_MAN);
         users.assertThat().exact(1).rows(SPIDER_MAN);
     }

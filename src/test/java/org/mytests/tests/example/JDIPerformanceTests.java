@@ -24,7 +24,7 @@ public class JDIPerformanceTests extends TestsInit {
 
     @Test
     public void hugeTableSearchTest() {
-        usersTable.assertThat().hasRowWithValues(
+        usersTable.assertThat().rowThat(
             containsValue("Meyer", inColumn("Name")),
             containsValue("co.uk", inColumn("Email")));
 
