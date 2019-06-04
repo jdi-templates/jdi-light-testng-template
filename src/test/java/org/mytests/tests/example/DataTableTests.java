@@ -10,7 +10,7 @@ import java.util.List;
 
 import static java.util.Arrays.asList;
 import static org.hamcrest.Matchers.*;
-import static org.mytests.tests.preconditions.Preconditions.shouldBeLoggedIn;
+import static org.mytests.tests.states.States.shouldBeLoggedIn;
 import static org.mytests.uiobjects.example.TestData.SPIDER_MAN;
 import static org.mytests.uiobjects.example.site.SiteJdi.usersPage;
 import static org.mytests.uiobjects.example.site.pages.UsersPage.users;
