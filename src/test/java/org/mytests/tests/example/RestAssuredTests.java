@@ -49,7 +49,7 @@ public class RestAssuredTests extends TestsInit {
     }
 
     @Test
-    public void RestAssuredSmartPostTest() {
+    public static void RestAssuredSmartPostTest() {
         RestAssured.baseURI = "http://restapi.demoqa.com";
 
         String someRandomString = String.format("%1$TH%1$TM%1$TS", new Date());
