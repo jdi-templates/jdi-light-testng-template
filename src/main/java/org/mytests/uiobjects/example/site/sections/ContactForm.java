@@ -1,13 +1,11 @@
 package org.mytests.uiobjects.example.site.sections;
 
+import com.epam.jdi.light.elements.complex.dropdown.Dropdown;
 import com.epam.jdi.light.elements.composite.Form;
-import com.epam.jdi.light.elements.pageobjects.annotations.simple.UI;
-import com.epam.jdi.light.ui.html.common.Button;
-import com.epam.jdi.light.ui.html.common.Checkbox;
-import com.epam.jdi.light.ui.html.common.TextArea;
-import com.epam.jdi.light.ui.html.common.TextField;
-import com.epam.jdi.light.ui.html.complex.Combobox;
-import com.epam.jdi.light.ui.html.complex.Dropdown;
+import com.epam.jdi.light.elements.interfaces.complex.IsCombobox;
+import com.epam.jdi.light.elements.pageobjects.annotations.locators.UI;
+import com.epam.jdi.light.ui.html.elements.common.*;
+import com.epam.jdi.light.ui.html.elements.complex.*;
 import org.mytests.uiobjects.example.entities.Contacts;
 
 import java.lang.reflect.Field;
@@ -18,9 +16,10 @@ public class ContactForm extends Form<Contacts> {
 	TextField name, lastName, position, passportNumber, passportSeria;
 
 	Dropdown gender;
-	Combobox religion;
+	IsCombobox religion;
+	MultiSelector weather;
 
-	public Checkbox passport, acceptConditions;
+	Checkbox passport, acceptConditions;
 	TextArea description;
 
 	@UI("['Submit']") public Button submit;
