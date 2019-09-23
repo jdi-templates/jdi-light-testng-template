@@ -1,32 +1,6 @@
 package org.mytests.uiobjects.example;
 
-import org.mytests.uiobjects.example.entities.MarvelUserInfo;
-
 public class TestData {
-    public static MarvelUserInfo SPIDER_MAN = new MarvelUserInfo().set(m -> {
-        m.number = "2";
-        m.type = "User";
-        m.user = "Sergey Ivan";
-        m.description = "Spider Man:Dude";
-    });
-
-    public static String HEROES_PREVIEW =
-        "Number Type User Desciption" +
-        "1  Admin User Manager RomanWolverineVip" +
-        "2  Admin User Manager Sergey IvanSpider ManVip" +
-        "3  Admin User Manager VladzimirPunisherVip" +
-        "4  Admin User Manager Helen BennettCaptain Americasome descriptionVip" +
-        "5  Admin User Manager Yoshi TannamuriCyclopesome descriptionVip" +
-        "6  Admin User Manager Giovanni RovelliHulksome descriptionVip";
-    public static String HEROES_TABLE =
-        "||X||Number|Type|User|Description||\r\n" +
-        "||1||Admin|Roman|Wolverine||\r\n" +
-        "||2||User|Sergey Ivan|Spider Man||\r\n" +
-        "||3||Manager|Vladzimir|Punisher||\r\n" +
-        "||4||User|Helen Bennett|Captain America\\nsome description||\r\n" +
-        "||5||User|Yoshi Tannamuri|Cyclope\\nsome description||\r\n" +
-        "||6||User|Giovanni Rovelli|Hulk\\nsome description||\r\n";
-
     public static String TABLE_SNAPSHOOT = "Name Phone Email City" +
             "Burke Tucker 076 1971 1687 et.euismod.et@ut.edu GozŽe" +
             "Grady Brock (011307) 16843 cursus.et@commodo.org Alcobendas" +

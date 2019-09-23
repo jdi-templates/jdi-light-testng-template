@@ -1,8 +1,8 @@
 package org.mytests.tests.example;
 
-import org.mytests.tests.TestsInit;
+import org.mytests.tests.SimpleTestsInit;
 
-public class RetryTests extends TestsInit {
+public class RetryTests extends SimpleTestsInit {
 /*
     int count = 0;
     @Test

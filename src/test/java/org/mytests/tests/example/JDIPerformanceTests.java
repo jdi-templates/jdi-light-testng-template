@@ -2,19 +2,20 @@ package org.mytests.tests.example;
 
 import com.epam.jdi.light.elements.complex.table.Line;
 import org.apache.commons.lang3.time.StopWatch;
-import org.mytests.tests.TestsInit;
+import org.mytests.tests.SimpleTestsInit;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static com.epam.jdi.light.elements.complex.table.Column.inColumn;
 import static com.epam.jdi.light.elements.complex.table.TableMatcher.containsValue;
+import static com.epam.jdi.light.elements.complex.table.TableMatcher.hasValue;
 import static org.mytests.tests.states.States.shouldBeLoggedIn;
 import static org.mytests.uiobjects.example.TestData.TABLE_SNAPSHOOT;
 import static org.mytests.uiobjects.example.site.SiteJdi.performancePage;
 import static org.mytests.uiobjects.example.site.pages.JDIPerformancePage.*;
 
-public class JDIPerformanceTests extends TestsInit {
+public class JDIPerformanceTests extends SimpleTestsInit {
 
     @BeforeMethod
     public void openPerformancePage() {
@@ -27,12 +28,16 @@ public class JDIPerformanceTests extends TestsInit {
         usersTable.assertThat().rowThat(
             containsValue("Meyer", inColumn("Name")),
             containsValue("co.uk", inColumn("Email")));
+        usersTable.assertThat().no().rows(
+            hasValue("NO_NAME", inColumn("Name")),
+            hasValue("wrong.email", inColumn("Email")));
 
         StopWatch timer = StopWatch.createStarted();
         Line row = usersTable.row(
             containsValue("Meyer", inColumn("Name")),
             containsValue("co.uk", inColumn("Email")));
         System.out.println("Huge table search test Time: " + timer.getTime());
+
         Assert.assertEquals(row.getValue(),
         "Brian Meyer;(016977) 0358;mollis.nec@seddictumeleifend.co.uk;Houston");
     }
