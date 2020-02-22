@@ -1,9 +1,11 @@
 package org.mytests.tests.example;
 
 import org.mytests.tests.TestsInit;
+import org.testng.annotations.Test;
 
-public class RetryTests extends TestsInit {
-/*
+import static org.testng.Assert.assertTrue;
+
+class RetryTests implements TestsInit {
     int count = 0;
     @Test
     public void failedTest1() {
@@ -15,5 +17,5 @@ public class RetryTests extends TestsInit {
     public void failedTest2() {
         System.out.println("Retry2: " + count);
         assertTrue(false);
-    }*/
+    }
 }

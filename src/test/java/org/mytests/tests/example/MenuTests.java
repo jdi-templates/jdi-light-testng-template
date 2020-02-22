@@ -8,7 +8,7 @@ import static org.mytests.uiobjects.example.entities.LeftMenuData.*;
 import static org.mytests.uiobjects.example.site.SiteJdi.*;
 import static org.testng.Assert.assertEquals;
 
-public class MenuTests extends TestsInit {
+public class MenuTests implements TestsInit {
 
     @Test
     public void menuTest() {

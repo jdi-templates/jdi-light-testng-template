@@ -23,7 +23,7 @@ import static org.mytests.uiobjects.example.site.pages.UsersPage.users;
 import static org.mytests.uiobjects.example.site.pages.UsersPage.usersSetup;
 import static org.testng.Assert.assertEquals;
 
-public class DataTableTests extends TestsInit {
+public class DataTableTests implements TestsInit {
     private boolean firstTime = true;
     @BeforeMethod
     public void before() {

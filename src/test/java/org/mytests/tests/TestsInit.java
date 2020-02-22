@@ -20,10 +20,10 @@ import static org.hamcrest.Matchers.is;
 import static org.mytests.tests.PerfStatistic.*;
 import static org.mytests.uiobjects.example.site.SiteJdi.homePage;
 
-public class TestsInit {
-    public static Safe<Timer> TIMER = new Safe<>();
+public interface TestsInit {
+    Safe<Timer> TIMER = new Safe<>();
     @BeforeSuite(alwaysRun = true)
-    public static void setUp() {
+    default void setUp() {
         INTERFACES.update(IsCombobox.class, DataListOptions.class);
         initSite(SiteJdi.class);
         assertThat(TIMEOUT.get(), is(5));
@@ -42,7 +42,7 @@ public class TestsInit {
     }
 
     @AfterSuite(alwaysRun = true)
-    public void teardown() {
+    default void teardown() {
         System.out.println("Min: " + minTime() + "ms");
         System.out.println("Min Action: " + minAction());
         System.out.println("Max: " + maxTime() + "ms");
