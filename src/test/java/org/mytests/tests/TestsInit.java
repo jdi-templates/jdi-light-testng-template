@@ -33,9 +33,9 @@ public class TestsInit {
             processNewPage(jp);
             TIMER.set(new Timer());
         };
-        AFTER_JDI_ACTION = (jp, result) -> {
-            addStatistic(jp.getSignature().getName(), TIMER.get().timePassedInMSec());
-            return AFTER_STEP_ACTION.execute(jp, result);
+        AFTER_JDI_ACTION = (jInfo, result) -> {
+            addStatistic(jInfo.jp().getSignature().getName(), TIMER.get().timePassedInMSec());
+            return AFTER_STEP_ACTION.execute(jInfo, result);
         };
         homePage.open();
         logger.info("Run Tests");
