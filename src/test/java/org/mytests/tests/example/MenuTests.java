@@ -10,8 +10,9 @@ import static org.testng.Assert.assertEquals;
 
 public class MenuTests implements TestsInit {
 
-    @Test
+ //   @Test
     public void menuTest() {
+
         States.shouldBeLoggedIn();
         homePage.shouldBeOpened();
         leftMenu.select(Service, Dates);
