@@ -23,12 +23,11 @@ import static org.mytests.uiobjects.example.site.pages.UsersPage.users;
 import static org.mytests.uiobjects.example.site.pages.UsersPage.usersSetup;
 import static org.testng.Assert.assertEquals;
 
-public class DataTableTests implements TestsInit {
+public class DataTableTests extends TestsInit {
     private boolean firstTime = true;
     @BeforeMethod
     public void before() {
         shouldBeLoggedIn();
-        usersPage.shouldBeOpened();
         if (firstTime) {
             usersPage.open();
             firstTime = false;
@@ -124,8 +123,6 @@ public class DataTableTests implements TestsInit {
     public void rowDataExactMatcherTest() {
         users.assertThat().exact(1).rows(SPIDER_MAN);
     }
-    //
-
 
     @Test
     public void tableChainTest() {

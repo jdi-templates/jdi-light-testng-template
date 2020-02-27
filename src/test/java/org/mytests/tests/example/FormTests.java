@@ -12,7 +12,7 @@ import static org.mytests.uiobjects.example.entities.Defaults.DEFAULT_USER;
 import static org.mytests.uiobjects.example.site.SiteJdi.*;
 import static org.mytests.uiobjects.example.site.pages.ContactFormPage.contactForm;
 
-public class FormTests implements TestsInit {
+public class FormTests extends TestsInit {
 
     @Test
     public void loginTest() {

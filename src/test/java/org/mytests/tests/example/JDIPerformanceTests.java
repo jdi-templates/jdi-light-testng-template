@@ -14,9 +14,8 @@ import static org.mytests.tests.states.States.shouldBeLoggedIn;
 import static org.mytests.uiobjects.example.TestData.TABLE_SNAPSHOOT;
 import static org.mytests.uiobjects.example.site.SiteJdi.performancePage;
 import static org.mytests.uiobjects.example.site.pages.JDIPerformancePage.*;
-import static org.testng.Assert.*;
 
-public class JDIPerformanceTests implements TestsInit {
+public class JDIPerformanceTests extends TestsInit {
 
     @BeforeMethod
     public void openPerformancePage() {
@@ -39,7 +38,7 @@ public class JDIPerformanceTests implements TestsInit {
             containsValue("co.uk", inColumn("Email")));
         System.out.println("Huge table search test Time: " + timer.getTime());
 
-        assertEquals(row.getValue(),
+        Assert.assertEquals(row.getValue(),
         "Brian Meyer;(016977) 0358;mollis.nec@seddictumeleifend.co.uk;Houston");
     }
 
@@ -48,7 +47,7 @@ public class JDIPerformanceTests implements TestsInit {
         StopWatch timer = StopWatch.createStarted();
         String actualTable = usersTable.preview();
         System.out.println("Huge table validate test Time: " + timer.getTime());
-        assertEquals(actualTable, TABLE_SNAPSHOOT);
+        Assert.assertEquals(actualTable, TABLE_SNAPSHOOT);
     }
 
     @Test
@@ -57,7 +56,7 @@ public class JDIPerformanceTests implements TestsInit {
         StopWatch timer = StopWatch.createStarted();
         userNames.select(name);
         System.out.println("Big dropdown test Time: " + timer.getTime());
-        assertEquals(userNames.selected(), name);
+        Assert.assertEquals(userNames.selected(), name);
     }
 
     @Test

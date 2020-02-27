@@ -2,7 +2,6 @@ package org.mytests.uiobjects.example.site.sections;
 
 import com.epam.jdi.light.elements.complex.dropdown.DropdownSelect;
 import com.epam.jdi.light.elements.composite.Form;
-import com.epam.jdi.light.elements.interfaces.complex.IsCombobox;
 import com.epam.jdi.light.ui.html.elements.common.Checkbox;
 import com.epam.jdi.light.ui.html.elements.common.TextArea;
 import com.epam.jdi.light.ui.html.elements.common.TextField;
@@ -17,12 +16,12 @@ public class ContactForm extends Form<Contacts> {
 	TextField name, lastName, position, passportNumber, passportSeria;
 
 	DropdownSelect gender;
-	IsCombobox religion;
 	MultiDropdown weather;
 
 	Checkbox passport, acceptConditions;
 	TextArea description;
 
+	//jdi will find [type=submit] element in this context automatically
 	//@UI("['Submit']") public Button submit;
 
 	@Override

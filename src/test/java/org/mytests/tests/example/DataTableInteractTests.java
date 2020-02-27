@@ -14,7 +14,7 @@ import static org.mytests.uiobjects.example.site.pages.UsersPage.users;
 import static org.mytests.uiobjects.example.site.pages.UsersPage.usersSetup;
 import static org.testng.Assert.assertEquals;
 
-public class DataTableInteractTests implements TestsInit {
+public class DataTableInteractTests extends TestsInit {
 
     @BeforeMethod
     public void before() {
