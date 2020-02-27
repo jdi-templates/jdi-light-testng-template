@@ -15,7 +15,7 @@ http://pix.my/o/SJtkya?1547398292
 4. Logs: Observe test run results in Console log
 http://pix.my/o/CEtiOQ?1547398216
 
-5. Reporting: After running tests copy paste **allure-results** folder in to target folder. Run **allure:serve** in maven plugins
+5. Reporting: After running tests just run **allure:serve** in maven plugins
 http://pix.my/o/5KPsyr?1547398089
 
 6. Use as template for your project: 
