@@ -21,7 +21,7 @@ import static com.epam.jdi.tools.LinqUtils.*;
 import static java.util.Arrays.asList;
 import static org.jsoup.helper.StringUtil.isBlank;
 
-public class MultiDropdown extends UIListBase<UISelectAssert>
+public class MultiDropdown extends UIListBase<UISelectAssert<?,?>>
         implements ICoreElement, HasLabel {
 
     By expandArrow = By.cssSelector(".caret");
