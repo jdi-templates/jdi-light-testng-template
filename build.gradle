@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.epam.jdi'
+version = '1.0.0'
+description = 'Template: JDI Light TestNG'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    implementation 'com.epam.jdi:jdi-light-html:1.2.15'
+    testImplementation 'org.testng:testng:6.14.3'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+test {
+    useTestNG() {
+        suites("src/test/resources/general.xml")
+        systemProperty 'domain', System.getProperty('domain') ?: findProperty('domain')
+        systemProperty 'driver', System.getProperty('driver') ?: findProperty('driver')
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}

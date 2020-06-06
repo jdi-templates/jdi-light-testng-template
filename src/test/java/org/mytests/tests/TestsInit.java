@@ -11,7 +11,6 @@ import static com.epam.jdi.light.settings.WebSettings.*;
 public interface TestsInit {
     @BeforeSuite(alwaysRun = true)
     static void setUp() {
-        killAllSeleniumDrivers();
         openSite(SiteJdi.class);
         logger.info("Run Tests");
     }
