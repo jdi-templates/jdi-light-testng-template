@@ -12,8 +12,8 @@ java {
 }
 
 dependencies {
-    implementation 'com.epam.jdi:jdi-light-html:latest.release'
-    testImplementation 'org.testng:testng:7.0.0-beta1'
+    implementation 'com.epam.jdi:jdi-light-html:1.2.15'
+    testImplementation 'org.testng:testng:6.14.3'
 }
 
 tasks.withType(JavaCompile) {
@@ -23,6 +23,8 @@ tasks.withType(JavaCompile) {
 test {
     useTestNG() {
         suites("src/test/resources/general.xml")
+        systemProperty 'domain', System.getProperty('domain') ?: findProperty('domain')
+        systemProperty 'driver', System.getProperty('driver') ?: findProperty('driver')
     }
 }
 
