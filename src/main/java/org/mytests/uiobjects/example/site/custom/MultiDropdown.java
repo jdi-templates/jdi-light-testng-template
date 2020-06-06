@@ -37,7 +37,7 @@ public class MultiDropdown extends UIListBase<UISelectAssert<?,?>>
     }
     UIElement valueText() { return root().find(value).setName("value"); }
     List<UIElement> allValues() {
-        return root().finds(values);
+        return root().finds(values).indexFromZero();
     }
 
     @JDIAction(level = DEBUG)
@@ -114,11 +114,11 @@ public class MultiDropdown extends UIListBase<UISelectAssert<?,?>>
                 value.click();
         }
     }
-    public <TEnum extends Enum> void check(TEnum... values) {
+    public <TEnum extends Enum<?>> void check(TEnum... values) {
         check(getEnumValues(values));
     }
 
-    public <TEnum extends Enum> void uncheck(TEnum... values) {
+    public <TEnum extends Enum<?>> void uncheck(TEnum... values) {
         uncheck(getEnumValues(values));
     }
 

@@ -5,6 +5,7 @@ import org.mytests.tests.states.States;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import static org.mytests.tests.states.States.*;
 import static org.mytests.uiobjects.example.entities.LeftMenuData.*;
 import static org.mytests.uiobjects.example.site.SiteJdi.*;
 import static org.testng.Assert.*;
@@ -12,7 +13,7 @@ import static org.testng.Assert.*;
 public class MenuTests implements TestsInit {
     @BeforeMethod
     public void openPerformancePage() {
-        States.shouldBeLoggedIn();
+        shouldBeLoggedIn();
         homePage.shouldBeOpened();
     }
     @Test
