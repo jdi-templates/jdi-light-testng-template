@@ -5,52 +5,40 @@ before_install:
 before_script:
 - ls -lah
 - google-chrome-stable --version
+
 addons:
   chrome: stable
   apt:
     packages:
     - openjdk-8-jdk
 
-env:
-  global:
-  - CHROME_PROPERTIES="chrome.properties"
-  - WITH_PARAMS="-Ddriver=chrome -Dchrome.capabilities.path=$CHROME_PROPERTIES" #add -ntp when maven will be >=3.6.1 on travis
-  - GROUP_ID="com.epam.jdi"
-  - NOPO_TESTS="jdi-bdd-no-po-tests"
-  - NOPO_TESTS_PROPERTY="test-examples/jdi-bdd-no-po-tests"
-  - BDD_TESTS="jdi-bdd-tests"
-  - BOOTSTRAP_TESTS="jdi-light-bootstrap-tests"
-  - HTML_TESTS="jdi-light-html-tests"
-  - ANGULAR_TESTS="jdi-light-angular-tests"
-  - EXAMPLES="jdi-light-examples"
-  - EXAMPLES_PROPERTY="test-examples/jdi-light-examples"
-  - PERFORMANCE="jdi-performance"
-  - PERFORMANCE_PROPERTY="test-examples/jdi-performance"
-  - CHROME_ARGS="--headless"
-  - JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
-  - PATH="$JAVA_HOME/bin:$PATH"
-
 stages:
 - prepare
 - compile
-
 jobs:
   include:
   - stage: prepare
-    name: Welcome to jdi
+    name: JDI LIGHT TESTNG TEMPLATE
     script:
-    - echo ------------------- WELCOME TO JDI ----------------------
-    - mvn --version #it is helpful
+    - echo ------------------- WELCOME TO JDI LIGHT TESTNG TEMPLATE ----------------------
+    - mvn --version
 
   - stage: compile
-    name: Compile jdi code
+    name: Compile jdi light testng template
     script:
-    - mvn install -DskipTests
-
-after_failure:
-- echo "Build was failed"
-after_success:
-- echo "Build was successful"
+    - mvn install
+    after_failure:
+    - echo "Build was failed"
+    after_success:
+    - echo "Build was successful"
+    
+notifications:
+  webhooks:
+    urls:
+      - https://outlook.office.com/webhook/ea5e1b67-b282-49c8-9396-ead9d4c991a0@b41b72d0-4e9f-4c26-8a69-f949f367c91d/TravisCI/a26900558e1f4f198849ab91654abba1/1d65db1e-26ce-4372-9a58-9c3635f1f0bd
+    on_success: always # default: always
+    on_failure: always # default: always
+    
 # extra time during long builds
 install:
 - travis_wait
