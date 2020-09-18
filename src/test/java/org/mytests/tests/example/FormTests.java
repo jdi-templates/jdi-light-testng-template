@@ -5,10 +5,12 @@ import org.mytests.tests.TestsInit;
 import org.mytests.uiobjects.example.entities.Contacts;
 import org.testng.annotations.Test;
 
-import static org.mytests.tests.states.States.*;
-import static org.mytests.uiobjects.example.entities.Defaults.*;
+import static org.mytests.tests.states.States.shouldBeLoggedIn;
+import static org.mytests.tests.states.States.shouldBeLoggedOut;
+import static org.mytests.uiobjects.example.entities.Defaults.DEFAULT_CONTACT;
+import static org.mytests.uiobjects.example.entities.Defaults.DEFAULT_USER;
 import static org.mytests.uiobjects.example.site.SiteJdi.*;
-import static org.mytests.uiobjects.example.site.pages.ContactFormPage.*;
+import static org.mytests.uiobjects.example.site.pages.ContactFormPage.contactForm;
 
 public class FormTests implements TestsInit {
 
@@ -25,6 +27,8 @@ public class FormTests implements TestsInit {
         shouldBeLoggedIn();
         contactFormPage.shouldBeOpened();
         contactForm.submit(DEFAULT_CONTACT);
+        contactForm.check(DEFAULT_CONTACT);
+        DEFAULT_CONTACT.passportSeria = "Changed";
         contactForm.check(DEFAULT_CONTACT);
     }
 
