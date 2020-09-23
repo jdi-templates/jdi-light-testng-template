@@ -28,8 +28,6 @@ public class FormTests implements TestsInit {
         contactFormPage.shouldBeOpened();
         contactForm.submit(DEFAULT_CONTACT);
         contactForm.check(DEFAULT_CONTACT);
-        DEFAULT_CONTACT.passportSeria = "Changed";
-        contactForm.check(DEFAULT_CONTACT);
     }
 
     @Test
