@@ -2,7 +2,6 @@ package org.mytests.uiobjects.example.site.pages;
 
 import com.epam.jdi.light.elements.complex.dropdown.DropdownSelect;
 import com.epam.jdi.light.elements.composite.WebPage;
-import com.epam.jdi.light.elements.interfaces.complex.IsCombobox;
 import com.epam.jdi.light.elements.pageobjects.annotations.Title;
 import com.epam.jdi.light.elements.pageobjects.annotations.Url;
 import com.epam.jdi.light.elements.pageobjects.annotations.locators.UI;
@@ -14,10 +13,9 @@ import org.mytests.uiobjects.example.site.custom.MultiDropdown;
 
 @Url("/contacts.html") @Title("Contact Form")
 public class ContactsPage extends WebPage {
-	TextField name, lastName, position, passportNumber, passportSeria;
+	TextField firstName, lastName, position, passportNumber, passportSeria;
 
 	DropdownSelect gender;
-	IsCombobox religion;
 	MultiDropdown weather;
 
 	Checkbox passport, acceptConditions;

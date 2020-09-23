@@ -1,0 +1,44 @@
+language: java
+before_install:
+- sudo apt-get -y install jq
+- java -Xmx32m -version
+before_script:
+- ls -lah
+- google-chrome-stable --version
+
+addons:
+  chrome: stable
+  apt:
+    packages:
+    - openjdk-8-jdk
+
+stages:
+- prepare
+- compile
+jobs:
+  include:
+  - stage: prepare
+    name: JDI LIGHT TESTNG TEMPLATE
+    script:
+    - echo ------------------- WELCOME TO JDI LIGHT TESTNG TEMPLATE ----------------------
+    - mvn --version
+
+  - stage: compile
+    name: Compile jdi light testng template
+    script:
+    - mvn install
+    after_failure:
+    - echo "Build was failed"
+    after_success:
+    - echo "Build was successful"
+    
+notifications:
+  webhooks:
+    urls:
+      - https://outlook.office.com/webhook/ac8f242a-5a99-4fab-a4d7-799de8968df5@b41b72d0-4e9f-4c26-8a69-f949f367c91d/TravisCI/cac0ca45d141409da3358ea48a956ed5/1d65db1e-26ce-4372-9a58-9c3635f1f0bd
+    on_success: always # default: always
+    on_failure: always # default: always
+    
+# extra time during long builds
+install:
+- travis_wait

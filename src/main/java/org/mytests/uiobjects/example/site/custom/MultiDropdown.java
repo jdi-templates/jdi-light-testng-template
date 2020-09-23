@@ -8,11 +8,9 @@ import com.epam.jdi.light.elements.base.UIListBase;
 import com.epam.jdi.light.elements.common.UIElement;
 import com.epam.jdi.light.elements.interfaces.base.HasLabel;
 import com.epam.jdi.light.elements.interfaces.base.ICoreElement;
-import org.apache.commons.lang3.time.StopWatch;
 import org.openqa.selenium.By;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import static com.epam.jdi.light.driver.WebDriverByUtils.fillByTemplate;
 import static com.epam.jdi.light.elements.init.UIFactory.$;
@@ -21,9 +19,9 @@ import static com.epam.jdi.light.logger.LogLevels.DEBUG;
 import static com.epam.jdi.tools.EnumUtils.getEnumValues;
 import static com.epam.jdi.tools.LinqUtils.*;
 import static java.util.Arrays.asList;
-import static org.jsoup.helper.StringUtil.isBlank;
+import static org.apache.commons.lang3.StringUtils.isBlank;
 
-public class MultiDropdown extends UIListBase<UISelectAssert>
+public class MultiDropdown extends UIListBase<UISelectAssert<?,?>>
         implements ICoreElement, HasLabel {
 
     By expandArrow = By.cssSelector(".caret");
@@ -100,11 +98,6 @@ public class MultiDropdown extends UIListBase<UISelectAssert>
         }
         label().click();
     }
-    private long getTime(StopWatch s) {
-        long result = s.getTime(TimeUnit.MILLISECONDS);
-        s.reset(); s.start();
-        return result;
-    }
 
     /**
      * Unselects only particular elements
@@ -122,11 +115,11 @@ public class MultiDropdown extends UIListBase<UISelectAssert>
                 value.click();
         }
     }
-    public <TEnum extends Enum> void check(TEnum... values) {
+    public <TEnum extends Enum<?>> void check(TEnum... values) {
         check(getEnumValues(values));
     }
 
-    public <TEnum extends Enum> void uncheck(TEnum... values) {
+    public <TEnum extends Enum<?>> void uncheck(TEnum... values) {
         uncheck(getEnumValues(values));
     }
 

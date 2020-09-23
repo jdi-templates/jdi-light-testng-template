@@ -12,7 +12,7 @@ import static org.mytests.uiobjects.example.entities.Defaults.DEFAULT_USER;
 import static org.mytests.uiobjects.example.site.SiteJdi.*;
 import static org.mytests.uiobjects.example.site.pages.ContactFormPage.contactForm;
 
-public class FormTests extends TestsInit {
+public class FormTests implements TestsInit {
 
     @Test
     public void loginTest() {
@@ -27,6 +27,8 @@ public class FormTests extends TestsInit {
         shouldBeLoggedIn();
         contactFormPage.shouldBeOpened();
         contactForm.submit(DEFAULT_CONTACT);
+        contactForm.check(DEFAULT_CONTACT);
+        DEFAULT_CONTACT.passportSeria = "Changed";
         contactForm.check(DEFAULT_CONTACT);
     }
 
