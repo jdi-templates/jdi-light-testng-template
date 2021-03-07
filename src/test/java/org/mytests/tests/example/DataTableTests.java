@@ -2,8 +2,10 @@ package org.mytests.tests.example;
 
 import com.epam.jdi.light.elements.complex.table.Single;
 import org.mytests.tests.TestsInit;
+import org.mytests.tests.testng.TestNGListener;
 import org.mytests.uiobjects.example.entities.MarvelUserInfo;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -23,6 +25,7 @@ import static org.mytests.uiobjects.example.site.pages.UsersPage.users;
 import static org.mytests.uiobjects.example.site.pages.UsersPage.usersSetup;
 import static org.testng.Assert.assertEquals;
 
+@Listeners(TestNGListener.class)
 public class DataTableTests implements TestsInit {
     private boolean firstTime = true;
     @BeforeMethod
