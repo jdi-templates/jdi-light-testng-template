@@ -19,7 +19,7 @@ jobs:
       max-parallel: 1
       fail-fast: false
       matrix:
-        java: [ 8, 9, 10, 11, 12, 13, 14, 15, 16 ]
+        java: [ 8, 9, 10, 11, 12, 13, 14, 15 ]  # doesn't work on 16
 
     steps:
       - uses: actions/checkout@v2
@@ -43,10 +43,10 @@ jobs:
           path: gh-pages
 
       - name: Tests
-        if: steps.allure-setup.outcome == 'success'
+        id: ftests
         timeout-minutes: 10
         continue-on-error: true
-        run: mvn clean test
+        run: mvn test -ntp --fail-at-end
 
       - name: Allure Report action from marketplace
         uses: simple-elf/allure-report-action@master
@@ -62,4 +62,9 @@ jobs:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
-        
+
+      - name: Check tests are passed
+        if: ${{ steps.ftests.outcome != 'success' }}
+        run: |
+          echo Tests result: ${{ steps.ftests.outcome }}
+          exit 1
