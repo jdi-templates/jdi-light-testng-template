@@ -1,0 +1,291 @@
+{
+  "uid" : "7742beeecb9a2e6a",
+  "name" : "lineByIndexTest",
+  "fullName" : "org.mytests.tests.example.DataTableInteractTests.lineByIndexTest",
+  "historyId" : "23ae6868c83d41ad1f6c64b08f044053",
+  "time" : {
+    "start" : 1629828931249,
+    "stop" : 1629828931249,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "statusMessage" : "Can't init 'page' 'performancePage' on 'SiteJdi'",
+  "statusTrace" : "java.lang.RuntimeException: Can't init 'page' 'performancePage' on 'SiteJdi'\n\tat com.epam.jdi.light.common.Exceptions.exception(Exceptions.java:31)\n\tat com.epam.jdi.light.elements.init.PageFactory.initialize(PageFactory.java:67)\n\tat com.epam.jdi.light.elements.init.PageFactory.initSite(PageFactory.java:58)\n\tat com.epam.jdi.light.elements.init.PageFactory.initSite(PageFactory.java:51)\n\tat org.mytests.tests.TestsInit.setUp(TestsInit.java:17)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)\n\tat org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)\n\tat org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)\n\tat org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:364)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1137)\n\tat org.testng.TestNG.runSuites(TestNG.java:1049)\n\tat org.testng.TestNG.run(TestNG.java:1017)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)\n\tat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)\n\tat org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)\nCaused by: java.lang.RuntimeException: Can't create field 'performancePage' instance of type 'class org.mytests.uiobjects.example.site.pages.JDIPerformancePage'. Try new class org.mytests.uiobjects.example.site.pages.JDIPerformancePage() to get more details\n\tat com.epam.jdi.light.common.Exceptions.exception(Exceptions.java:31)\n\tat com.epam.jdi.light.elements.init.PageFactory.initWithConstructor(PageFactory.java:178)\n\tat com.epam.jdi.light.elements.init.PageFactory.initJdiField(PageFactory.java:93)\n\tat com.epam.jdi.light.elements.init.PageFactory.getElementInstance(PageFactory.java:82)\n\tat com.epam.jdi.light.elements.init.PageFactory.setFieldWithInstance(PageFactory.java:73)\n\tat com.epam.jdi.light.elements.init.PageFactory.initialize(PageFactory.java:65)\n\t... 27 more\nCaused by: java.lang.RuntimeException: \nCan't init 'element' 'textareaPerformance' on 'JDIPerformancePage'\n\tat com.epam.jdi.light.common.Exceptions.exception(Exceptions.java:16)\n\tat com.epam.jdi.light.elements.init.PageFactory.initWithConstructor(PageFactory.java:176)\n\t... 31 more\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1629828895791,
+      "stop" : 1629828930850,
+      "duration" : 35059
+    },
+    "description" : "",
+    "status" : "broken",
+    "statusMessage" : "Can't init 'page' 'performancePage' on 'SiteJdi'",
+    "statusTrace" : "java.lang.RuntimeException: Can't init 'page' 'performancePage' on 'SiteJdi'\n\tat com.epam.jdi.light.common.Exceptions.exception(Exceptions.java:31)\n\tat com.epam.jdi.light.elements.init.PageFactory.initialize(PageFactory.java:67)\n\tat com.epam.jdi.light.elements.init.PageFactory.initSite(PageFactory.java:58)\n\tat com.epam.jdi.light.elements.init.PageFactory.initSite(PageFactory.java:51)\n\tat org.mytests.tests.TestsInit.setUp(TestsInit.java:17)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)\n\tat org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)\n\tat org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)\n\tat org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:364)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1137)\n\tat org.testng.TestNG.runSuites(TestNG.java:1049)\n\tat org.testng.TestNG.run(TestNG.java:1017)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)\n\tat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)\n\tat org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)\nCaused by: java.lang.RuntimeException: Can't create field 'performancePage' instance of type 'class org.mytests.uiobjects.example.site.pages.JDIPerformancePage'. Try new class org.mytests.uiobjects.example.site.pages.JDIPerformancePage() to get more details\n\tat com.epam.jdi.light.common.Exceptions.exception(Exceptions.java:31)\n\tat com.epam.jdi.light.elements.init.PageFactory.initWithConstructor(PageFactory.java:178)\n\tat com.epam.jdi.light.elements.init.PageFactory.initJdiField(PageFactory.java:93)\n\tat com.epam.jdi.light.elements.init.PageFactory.getElementInstance(PageFactory.java:82)\n\tat com.epam.jdi.light.elements.init.PageFactory.setFieldWithInstance(PageFactory.java:73)\n\tat com.epam.jdi.light.elements.init.PageFactory.initialize(PageFactory.java:65)\n\t... 27 more\nCaused by: java.lang.RuntimeException: \nCan't init 'element' 'textareaPerformance' on 'JDIPerformancePage'\n\tat com.epam.jdi.light.common.Exceptions.exception(Exceptions.java:16)\n\tat com.epam.jdi.light.elements.init.PageFactory.initWithConstructor(PageFactory.java:176)\n\t... 31 more\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  } ],
+  "afterStages" : [ {
+    "name" : "teardown",
+    "time" : {
+      "start" : 1629828931580,
+      "stop" : 1629828931618,
+      "duration" : 38
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "org.mytests.tests.example.DataTableInteractTests"
+  }, {
+    "name" : "testClass",
+    "value" : "org.mytests.tests.example.DataTableInteractTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "lineByIndexTest"
+  }, {
+    "name" : "parentSuite",
+    "value" : "JDI-Light Performance"
+  }, {
+    "name" : "suite",
+    "value" : "Tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "org.mytests.tests.example.DataTableInteractTests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az174-438"
+  }, {
+    "name" : "thread",
+    "value" : "4389@fv-az174-438.TestNG-test=Tests-1(17)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 4,
+        "passed" : 36,
+        "unknown" : 0,
+        "total" : 40
+      },
+      "items" : [ {
+        "uid" : "4128d649c2400a5f",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/11//#testresult/4128d649c2400a5f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629828686776,
+          "stop" : 1629828690983,
+          "duration" : 4207
+        }
+      }, {
+        "uid" : "7a682972104b305",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/11//#testresult/7a682972104b305",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629828478632,
+          "stop" : 1629828482243,
+          "duration" : 3611
+        }
+      }, {
+        "uid" : "1e113b992558fca2",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/11//#testresult/1e113b992558fca2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629828247660,
+          "stop" : 1629828251481,
+          "duration" : 3821
+        }
+      }, {
+        "uid" : "5e26023488922644",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/11//#testresult/5e26023488922644",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629828027271,
+          "stop" : 1629828030487,
+          "duration" : 3216
+        }
+      }, {
+        "uid" : "dc2649988061b460",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/11//#testresult/dc2649988061b460",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629827812287,
+          "stop" : 1629827816744,
+          "duration" : 4457
+        }
+      }, {
+        "uid" : "f09c2265d3e57f32",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/11//#testresult/f09c2265d3e57f32",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629827595172,
+          "stop" : 1629827598864,
+          "duration" : 3692
+        }
+      }, {
+        "uid" : "b8ba5df080e6d234",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/11//#testresult/b8ba5df080e6d234",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629827384999,
+          "stop" : 1629827388223,
+          "duration" : 3224
+        }
+      }, {
+        "uid" : "839cb95c0babc909",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/11//#testresult/839cb95c0babc909",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629827161751,
+          "stop" : 1629827165482,
+          "duration" : 3731
+        }
+      }, {
+        "uid" : "b6236a4d4e19c2d6",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/10//#testresult/b6236a4d4e19c2d6",
+        "status" : "skipped",
+        "statusDetails" : "Can't init 'page' 'performancePage' on 'SiteJdi'",
+        "time" : {
+          "start" : 1629826526508,
+          "stop" : 1629826526508,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "e50ed6aea6afc016",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/10//#testresult/e50ed6aea6afc016",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629826307369,
+          "stop" : 1629826310762,
+          "duration" : 3393
+        }
+      }, {
+        "uid" : "7ac6346b6668b142",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/10//#testresult/7ac6346b6668b142",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629826093888,
+          "stop" : 1629826097727,
+          "duration" : 3839
+        }
+      }, {
+        "uid" : "f06abaaef03dd5a0",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/10//#testresult/f06abaaef03dd5a0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629825884985,
+          "stop" : 1629825888322,
+          "duration" : 3337
+        }
+      }, {
+        "uid" : "c8999155050856f4",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/10//#testresult/c8999155050856f4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629825676497,
+          "stop" : 1629825680343,
+          "duration" : 3846
+        }
+      }, {
+        "uid" : "c7990b1737e2a558",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/10//#testresult/c7990b1737e2a558",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629825477455,
+          "stop" : 1629825481038,
+          "duration" : 3583
+        }
+      }, {
+        "uid" : "a76c8d55c5b5c18",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/10//#testresult/a76c8d55c5b5c18",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629825243000,
+          "stop" : 1629825247378,
+          "duration" : 4378
+        }
+      }, {
+        "uid" : "b7d60d4c9d025784",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/10//#testresult/b7d60d4c9d025784",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629824989104,
+          "stop" : 1629824992747,
+          "duration" : 3643
+        }
+      }, {
+        "uid" : "f5c9098888ffa159",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/10//#testresult/f5c9098888ffa159",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629824784157,
+          "stop" : 1629824787426,
+          "duration" : 3269
+        }
+      }, {
+        "uid" : "52e2920e7b2726ea",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/9//#testresult/52e2920e7b2726ea",
+        "status" : "skipped",
+        "statusDetails" : "Can't init 'page' 'performancePage' on 'SiteJdi'",
+        "time" : {
+          "start" : 1629813444650,
+          "stop" : 1629813444650,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "e627c3686785673a",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/9//#testresult/e627c3686785673a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629813207100,
+          "stop" : 1629813211297,
+          "duration" : 4197
+        }
+      }, {
+        "uid" : "cff4649a0f3a5c77",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/9//#testresult/cff4649a0f3a5c77",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629812990781,
+          "stop" : 1629812994735,
+          "duration" : 3954
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "7742beeecb9a2e6a.json",
+  "parameterValues" : [ ]
+}
