@@ -46,7 +46,7 @@ jobs:
         id: ftests
         timeout-minutes: 10
         continue-on-error: true
-        run: mvn test
+        run: mvn test -ntp --fail-at-end
 
       - name: Allure Report action from marketplace
         uses: simple-elf/allure-report-action@master
