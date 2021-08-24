@@ -1,12 +1,12 @@
 {
-  "uid" : "34c94d8f6479406a",
-  "name" : "tableParamsTest",
-  "fullName" : "org.mytests.tests.example.DataTableTests.tableParamsTest",
-  "historyId" : "900700fe5631074d88345619a4d84e25",
+  "uid" : "82a7b80cd46deaf0",
+  "name" : "previewTest",
+  "fullName" : "org.mytests.tests.example.DataTableTests.previewTest",
+  "historyId" : "166b37071ede87141a8ad3731e04b226",
   "time" : {
-    "start" : 1629809210986,
-    "stop" : 1629809210996,
-    "duration" : 10
+    "start" : 1629809168666,
+    "stop" : 1629809168775,
+    "duration" : 109
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,18 +14,18 @@
   "beforeStages" : [ {
     "name" : "before",
     "time" : {
-      "start" : 1629809210923,
-      "stop" : 1629809210984,
-      "duration" : 61
+      "start" : 1629809168603,
+      "stop" : 1629809168665,
+      "duration" : 62
     },
     "description" : "",
     "status" : "passed",
     "steps" : [ {
       "name" : "shouldBeLoggedIn",
       "time" : {
-        "start" : 1629809210923,
-        "stop" : 1629809210984,
-        "duration" : 61
+        "start" : 1629809168606,
+        "stop" : 1629809168665,
+        "duration" : 59
       },
       "status" : "passed",
       "steps" : [ ],
@@ -45,26 +45,26 @@
   }, {
     "name" : "setUp",
     "time" : {
-      "start" : 1629809078034,
-      "stop" : 1629809093769,
-      "duration" : 15735
+      "start" : 1629809074683,
+      "stop" : 1629809085606,
+      "duration" : 10923
     },
     "description" : "",
     "status" : "passed",
     "steps" : [ {
       "name" : "Open 'SiteJdi'(url=https://jdi-testing.github.io/jdi-light/)",
       "time" : {
-        "start" : 1629809080141,
-        "stop" : 1629809093765,
-        "duration" : 13624
+        "start" : 1629809076770,
+        "stop" : 1629809085598,
+        "duration" : 8828
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Open 'SiteJdi'(url=https://jdi-testing.github.io/jdi-light/)",
         "time" : {
-          "start" : 1629809091574,
-          "stop" : 1629809093764,
-          "duration" : 2190
+          "start" : 1629809083311,
+          "stop" : 1629809085597,
+          "duration" : 2286
         },
         "status" : "passed",
         "steps" : [ ],
@@ -76,9 +76,9 @@
         "hasContent" : false
       } ],
       "attachments" : [ {
-        "uid" : "a09d8ac85d2cf3da",
+        "uid" : "afab144239ef4918",
         "name" : "Details",
-        "source" : "a09d8ac85d2cf3da.html",
+        "source" : "afab144239ef4918.html",
         "type" : "text/plain",
         "size" : 145
       } ],
@@ -98,73 +98,67 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Get 'Users' rows count",
+      "name" : "Preview 'Users' table",
       "time" : {
-        "start" : 1629809210987,
-        "stop" : 1629809210991,
-        "duration" : 4
+        "start" : 1629809168669,
+        "stop" : 1629809168774,
+        "duration" : 105
       },
       "status" : "passed",
-      "steps" : [ ],
+      "steps" : [ {
+        "name" : "Get 'Users' text",
+        "time" : {
+          "start" : 1629809168674,
+          "stop" : 1629809168772,
+          "duration" : 98
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "51eb60a41ed57e22",
+          "name" : "Actual result",
+          "source" : "51eb60a41ed57e22.html",
+          "type" : "text/plain",
+          "size" : 579
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
       "attachments" : [ {
-        "uid" : "4a376312329ec4c",
+        "uid" : "e0d00c2ec4f9c6aa",
         "name" : "Details",
-        "source" : "4a376312329ec4c.html",
+        "source" : "e0d00c2ec4f9c6aa.html",
         "type" : "text/plain",
         "size" : 35
       }, {
-        "uid" : "91f311a97f98c5bd",
+        "uid" : "b4e7f16ef5ffe67f",
         "name" : "Actual result",
-        "source" : "91f311a97f98c5bd.html",
+        "source" : "b4e7f16ef5ffe67f.html",
         "type" : "text/plain",
-        "size" : 1
+        "size" : 363
       } ],
       "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 2,
-      "shouldDisplayMessage" : false,
-      "hasContent" : true
-    }, {
-      "name" : "Get 'Users' header",
-      "time" : {
-        "start" : 1629809210991,
-        "stop" : 1629809210995,
-        "duration" : 4
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ {
-        "uid" : "6c52b76b8c27001",
-        "name" : "Details",
-        "source" : "6c52b76b8c27001.html",
-        "type" : "text/plain",
-        "size" : 35
-      }, {
-        "uid" : "99e8804f2f8f20e6",
-        "name" : "Actual result",
-        "source" : "99e8804f2f8f20e6.html",
-        "type" : "text/plain",
-        "size" : 33
-      } ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 2,
+      "stepsCount" : 1,
+      "attachmentsCount" : 3,
       "shouldDisplayMessage" : false,
       "hasContent" : true
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
     "stepsCount" : 2,
-    "attachmentsCount" : 4,
+    "attachmentsCount" : 3,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "teardown",
     "time" : {
-      "start" : 1629809211126,
-      "stop" : 1629809211166,
-      "duration" : 40
+      "start" : 1629809226104,
+      "stop" : 1629809226164,
+      "duration" : 60
     },
     "description" : "",
     "status" : "passed",
@@ -184,7 +178,7 @@
     "value" : "org.mytests.tests.example.DataTableTests"
   }, {
     "name" : "testMethod",
-    "value" : "tableParamsTest"
+    "value" : "previewTest"
   }, {
     "name" : "parentSuite",
     "value" : "JDI-Light Performance"
@@ -196,10 +190,10 @@
     "value" : "org.mytests.tests.example.DataTableTests"
   }, {
     "name" : "host",
-    "value" : "fv-az234-537"
+    "value" : "fv-az120-13"
   }, {
     "name" : "thread",
-    "value" : "4208@fv-az234-537.TestNG-test=Tests-3(27)"
+    "value" : "3823@fv-az120-13.TestNG-test=Tests-3(26)"
   }, {
     "name" : "framework",
     "value" : "testng"
@@ -228,36 +222,36 @@
         "total" : 4
       },
       "items" : [ {
-        "uid" : "140fdac7bbe8e2f4",
-        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/6//#testresult/140fdac7bbe8e2f4",
+        "uid" : "f8640349fec76e6a",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/6//#testresult/f8640349fec76e6a",
         "status" : "passed",
         "time" : {
-          "start" : 1629456485494,
-          "stop" : 1629456485505,
-          "duration" : 11
+          "start" : 1629456444460,
+          "stop" : 1629456444543,
+          "duration" : 83
         }
       }, {
-        "uid" : "e7f5a76fcd28348c",
-        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/5//#testresult/e7f5a76fcd28348c",
+        "uid" : "b2c0aee67887aee9",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/5//#testresult/b2c0aee67887aee9",
         "status" : "passed",
         "time" : {
-          "start" : 1616415551374,
-          "stop" : 1616415551384,
-          "duration" : 10
+          "start" : 1616415515956,
+          "stop" : 1616415516037,
+          "duration" : 81
         }
       }, {
-        "uid" : "9e5043c5cbc2deeb",
-        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/2//#testresult/9e5043c5cbc2deeb",
+        "uid" : "290fb43f9447af90",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/2//#testresult/290fb43f9447af90",
         "status" : "passed",
         "time" : {
-          "start" : 1614783756881,
-          "stop" : 1614783756892,
-          "duration" : 11
+          "start" : 1614783716684,
+          "stop" : 1614783716776,
+          "duration" : 92
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "34c94d8f6479406a.json",
+  "source" : "82a7b80cd46deaf0.json",
   "parameterValues" : [ ]
 }
