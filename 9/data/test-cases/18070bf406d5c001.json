@@ -1,0 +1,279 @@
+{
+  "uid" : "18070bf406d5c001",
+  "name" : "customMenuTest",
+  "fullName" : "org.mytests.tests.example.MenuTests.customMenuTest",
+  "historyId" : "f82d99216fb6cdf138a2ed677f2414b4",
+  "time" : {
+    "start" : 1629811698543,
+    "stop" : 1629811698543,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "statusMessage" : "java.lang.NullPointerException",
+  "statusTrace" : "java.lang.RuntimeException: java.lang.NullPointerException\n\tat com.epam.jdi.tools.func.JFunc2.execute(JFunc2.java:21)\n\tat com.epam.jdi.light.actions.ActionProcessor.stepAround(ActionProcessor.java:87)\n\tat org.mytests.tests.states.States.shouldBeLoggedIn(States.java:19)\n\tat org.mytests.tests.example.MenuTests.openPerformancePage(MenuTests.java:18)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)\n\tat org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)\n\tat org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)\n\tat org.testng.internal.Invoker.invokeMethod(Invoker.java:523)\n\tat org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)\n\tat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat java.lang.Thread.run(Thread.java:748)\nCaused by: java.lang.NullPointerException\n\tat com.epam.jdi.light.actions.ActionHelper.actionFailed(ActionHelper.java:367)\n\tat com.epam.jdi.tools.func.JFunc2.execute(JFunc2.java:19)\n\t... 19 more\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "openPerformancePage",
+    "time" : {
+      "start" : 1629811698309,
+      "stop" : 1629811698336,
+      "duration" : 27
+    },
+    "description" : "",
+    "status" : "broken",
+    "statusMessage" : "java.lang.NullPointerException",
+    "statusTrace" : "java.lang.RuntimeException: java.lang.NullPointerException\n\tat com.epam.jdi.tools.func.JFunc2.execute(JFunc2.java:21)\n\tat com.epam.jdi.light.actions.ActionProcessor.stepAround(ActionProcessor.java:87)\n\tat org.mytests.tests.states.States.shouldBeLoggedIn(States.java:19)\n\tat org.mytests.tests.example.MenuTests.openPerformancePage(MenuTests.java:18)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)\n\tat org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)\n\tat org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)\n\tat org.testng.internal.Invoker.invokeMethod(Invoker.java:523)\n\tat org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)\n\tat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat java.lang.Thread.run(Thread.java:748)\nCaused by: java.lang.NullPointerException\n\tat com.epam.jdi.light.actions.ActionHelper.actionFailed(ActionHelper.java:367)\n\tat com.epam.jdi.tools.func.JFunc2.execute(JFunc2.java:19)\n\t... 19 more\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  }, {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1629811674459,
+      "stop" : 1629811698206,
+      "duration" : 23747
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open 'SiteJdi'(url=https://jdi-testing.github.io/jdi-light/)",
+      "time" : {
+        "start" : 1629811676303,
+        "stop" : 1629811698205,
+        "duration" : 21902
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Open 'SiteJdi'(url=https://jdi-testing.github.io/jdi-light/)",
+        "time" : {
+          "start" : 1629811695016,
+          "stop" : 1629811698205,
+          "duration" : 3189
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ {
+        "uid" : "85e76fc74739a8a5",
+        "name" : "Details",
+        "source" : "85e76fc74739a8a5.html",
+        "type" : "text/plain",
+        "size" : 145
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "afterStages" : [ {
+    "name" : "teardown",
+    "time" : {
+      "start" : 1629811802556,
+      "stop" : 1629811802599,
+      "duration" : 43
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "org.mytests.tests.example.MenuTests"
+  }, {
+    "name" : "testClass",
+    "value" : "org.mytests.tests.example.MenuTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "customMenuTest"
+  }, {
+    "name" : "parentSuite",
+    "value" : "JDI-Light Performance"
+  }, {
+    "name" : "suite",
+    "value" : "Tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "org.mytests.tests.example.MenuTests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az270-573"
+  }, {
+    "name" : "thread",
+    "value" : "3955@fv-az270-573.TestNG-test=Tests-4(25)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 2,
+        "passed" : 12,
+        "unknown" : 0,
+        "total" : 14
+      },
+      "items" : [ {
+        "uid" : "27e5de84ac3fe515",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/8//#testresult/27e5de84ac3fe515",
+        "status" : "skipped",
+        "statusDetails" : "Can't init 'page' 'performancePage' on 'SiteJdi'",
+        "time" : {
+          "start" : 1629811350075,
+          "stop" : 1629811350075,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "289ece917136684",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/8//#testresult/289ece917136684",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629811137242,
+          "stop" : 1629811159785,
+          "duration" : 22543
+        }
+      }, {
+        "uid" : "40d71b62f00dfd00",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/8//#testresult/40d71b62f00dfd00",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629810953808,
+          "stop" : 1629810975022,
+          "duration" : 21214
+        }
+      }, {
+        "uid" : "8aaf224534d9e66b",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/8//#testresult/8aaf224534d9e66b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629810757305,
+          "stop" : 1629810780774,
+          "duration" : 23469
+        }
+      }, {
+        "uid" : "f7f10ac3b890361d",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/8//#testresult/f7f10ac3b890361d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629810544450,
+          "stop" : 1629810566690,
+          "duration" : 22240
+        }
+      }, {
+        "uid" : "c0d4176a8a77e575",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/8//#testresult/c0d4176a8a77e575",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629810334902,
+          "stop" : 1629810357670,
+          "duration" : 22768
+        }
+      }, {
+        "uid" : "666d5d7de7396182",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/8//#testresult/666d5d7de7396182",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629810135790,
+          "stop" : 1629810156739,
+          "duration" : 20949
+        }
+      }, {
+        "uid" : "ae19818e8b8d83d7",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/8//#testresult/ae19818e8b8d83d7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629809937218,
+          "stop" : 1629809959849,
+          "duration" : 22631
+        }
+      }, {
+        "uid" : "8240f1a5dead07a0",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/8//#testresult/8240f1a5dead07a0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629809730034,
+          "stop" : 1629809753304,
+          "duration" : 23270
+        }
+      }, {
+        "uid" : "ce0af59675526511",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/7//#testresult/ce0af59675526511",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629809097831,
+          "stop" : 1629809126383,
+          "duration" : 28552
+        }
+      }, {
+        "uid" : "d8006c2812833a8a",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/6//#testresult/d8006c2812833a8a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629456402600,
+          "stop" : 1629456421752,
+          "duration" : 19152
+        }
+      }, {
+        "uid" : "1c0cfeb11d7b68e4",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/5//#testresult/1c0cfeb11d7b68e4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616415480089,
+          "stop" : 1616415503548,
+          "duration" : 23459
+        }
+      }, {
+        "uid" : "694255d013f92b8a",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/2//#testresult/694255d013f92b8a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614783677319,
+          "stop" : 1614783701230,
+          "duration" : 23911
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "18070bf406d5c001.json",
+  "parameterValues" : [ ]
+}
