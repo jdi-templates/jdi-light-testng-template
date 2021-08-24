@@ -16,6 +16,7 @@ jobs:
     name: Tests on JDK
     runs-on: ubuntu-18.04
     strategy:
+      max-parallel: 1
       fail-fast: false
       matrix:
         java: [ 8, 9, 10, 11, 12, 13, 14, 15, 16 ]
