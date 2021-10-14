@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     name: Tests on JDK
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     strategy:
       max-parallel: 1
       fail-fast: false
@@ -28,40 +28,56 @@ jobs:
 
       - name: Build with Maven
         id: build
-        run: mvn compile
+        run: mvn install -DskipTests -ntp
 
-      - name: Get Allure history
-        uses: actions/checkout@v2
-        id: allure-setup
-        if: steps.build.outcome == 'success'
-        continue-on-error: true
+      - name: Start Selenoid
+        uses: n-ton4/selenoid-github-action@master
+        id: start-selenoid
+        if: github.event_name == 'pull_request' && success()
         with:
-          ref: gh-pages
-          path: gh-pages
+          version: 1.10.1
+          args: -limit 4
+          browsers: chrome:92.0;chrome:88.0
+          last-versions: 1
+
+      - name: Check Selenoid has been started
+        run: curl http://localhost:4444/status
+        if: github.event_name == 'pull_request' && success()
 
       - name: Tests
         id: ftests
         timeout-minutes: 10
-        continue-on-error: true
-        run: mvn test -ntp --fail-at-end
+        if: github.event_name == 'pull_request' && success()
+        run: mvn test -Pci -ntp
 
-      - name: Allure Report action from marketplace
+      - name: Get Allure history
+        uses: actions/checkout@v2
+        id: allure-setup
+        continue-on-error: true
+        if: github.event_name == 'pull_request' && always()
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Generate Allure report
         uses: simple-elf/allure-report-action@master
-        if: always()
+        if: github.event_name == 'pull_request' && always()
         with:
           allure_results: target/allure-results
+          allure_report: target/allure-report
           allure_history: allure-history
 
-      - name: Deploy report to Github Pages
-        if: always()
+      - name: Upload Allure report
+        uses: actions/upload-artifact@master
+        if: github.event_name == 'pull_request' && always()
+        with:
+          name: Allure report
+          path: target/allure-report
+
+      - name: Deploy Allure report to Github Pages
+        if: github.event_name == 'pull_request' && always()
         uses: peaceiris/actions-gh-pages@v2
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
-
-      - name: Check tests are passed
-        if: ${{ steps.ftests.outcome != 'success' }}
-        run: |
-          echo Tests result: ${{ steps.ftests.outcome }}
-          exit 1
