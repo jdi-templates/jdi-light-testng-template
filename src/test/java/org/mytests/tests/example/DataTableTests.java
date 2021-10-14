@@ -13,7 +13,7 @@ import java.util.List;
 import static com.epam.jdi.light.elements.complex.table.Column.inColumn;
 import static com.epam.jdi.light.elements.complex.table.TableMatcher.containsValue;
 import static com.epam.jdi.light.elements.complex.table.TableMatcher.hasValue;
-import static com.epam.jdi.tools.StringUtils.LINE_BREAK;
+import static com.jdiai.tools.StringUtils.LINE_BREAK;
 import static java.util.Arrays.asList;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 import static org.hamcrest.Matchers.greaterThan;
