@@ -25,8 +25,8 @@ on:
             java-package: jdk
 
         - name: Build with Maven
-        id: build
-        run: mvn install -DskipTests -ntp
+          id: build
+          run: mvn install -DskipTests -ntp
 
         - name: Start Selenoid
           uses: n-ton4/selenoid-github-action@master
