@@ -16,7 +16,7 @@ jobs:
       max-parallel: 1
       fail-fast: false
       matrix:
-        java: [ 8, 9, 10, 11, 12, 13, 14, 15 ]  # doesn't work on 16
+        java: [ 8, 15 ]  # doesn't work on 16
 
     steps:
       - uses: actions/checkout@v2
@@ -28,7 +28,7 @@ jobs:
 
       - name: Build with Maven
         id: build
-        run: mvn install -DskipTests -ntp
+        run: mvn clean install -DskipTests -ntp
 
       - name: Start Selenoid
         uses: n-ton4/selenoid-github-action@master
