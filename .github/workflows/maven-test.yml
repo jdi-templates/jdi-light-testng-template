@@ -4,9 +4,13 @@ env:
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:
+      - '*' # matches every branch
+      - '*/*' # matches every branch containing a single '/'
+      - '!master' # excludes master
+
+    pull_request:
+      types: [ opened, synchronize ]
 
 jobs:
   build:
