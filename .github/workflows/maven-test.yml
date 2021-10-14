@@ -36,7 +36,7 @@ jobs:
         if: github.event_name == 'pull_request' && success()
         with:
           version: 1.10.1
-          args: -limit 4
+          args: -limit 6
           browsers: chrome:94.0
           last-versions: 1
 

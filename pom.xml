@@ -21,6 +21,7 @@
         <domain>https://jdi-testing.github.io/jdi-light/</domain>
         <driver.remote.url/>
         <browser.version/>
+        <log.level>DEBUG</log.level>
     </properties>
 
     <profiles>
@@ -32,6 +33,7 @@
             <properties>
                 <browser.version>94.0</browser.version>
                 <driver.remote.url>http://localhost:4444/wd/hub</driver.remote.url>
+                <log.level>INFO</log.level>
             </properties>
         </profile>
     </profiles>
