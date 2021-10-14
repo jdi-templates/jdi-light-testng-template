@@ -1,0 +1,1666 @@
+{
+  "uid" : "ebd3710a2dda0b42",
+  "name" : "fillContactFormTest",
+  "fullName" : "org.mytests.tests.example.FormTests.fillContactFormTest",
+  "historyId" : "8e41cf811ea4cbd476913f3a9fb7c08c",
+  "time" : {
+    "start" : 1629829815354,
+    "stop" : 1629829854963,
+    "duration" : 39609
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1629829812961,
+      "stop" : 1629829815156,
+      "duration" : 2195
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "shouldBeLoggedIn",
+      "time" : {
+        "start" : 1629829815369,
+        "stop" : 1629829826909,
+        "duration" : 11540
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Open 'Home Page'(url=https://jdi-testing.github.io/jdi-light/index.html)",
+        "time" : {
+          "start" : 1629829819322,
+          "stop" : 1629829822308,
+          "duration" : 2986
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Open 'Home Page'(url=https://jdi-testing.github.io/jdi-light/index.html)",
+          "time" : {
+            "start" : 1629829819344,
+            "stop" : 1629829822308,
+            "duration" : 2964
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ {
+          "uid" : "d568f5fb4b2742c2",
+          "name" : "Details",
+          "source" : "d568f5fb4b2742c2.html",
+          "type" : "text/plain",
+          "size" : 137
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "login",
+        "time" : {
+          "start" : 1629829822595,
+          "stop" : 1629829826909,
+          "duration" : 4314
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Click on 'User Icon'",
+          "time" : {
+            "start" : 1629829822619,
+            "stop" : 1629829823709,
+            "duration" : 1090
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Click on 'User Icon'",
+            "time" : {
+              "start" : 1629829822632,
+              "stop" : 1629829823709,
+              "duration" : 1077
+            },
+            "status" : "passed",
+            "steps" : [ {
+              "name" : "Check that 'User Icon' is disabled",
+              "time" : {
+                "start" : 1629829822646,
+                "stop" : 1629829823377,
+                "duration" : 731
+              },
+              "status" : "passed",
+              "steps" : [ ],
+              "attachments" : [ {
+                "uid" : "d46cfb16c75e54cc",
+                "name" : "Actual result",
+                "source" : "d46cfb16c75e54cc.html",
+                "type" : "text/plain",
+                "size" : 5
+              } ],
+              "parameters" : [ ],
+              "stepsCount" : 0,
+              "attachmentsCount" : 1,
+              "shouldDisplayMessage" : false,
+              "hasContent" : true
+            } ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "stepsCount" : 1,
+            "attachmentsCount" : 1,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ {
+            "uid" : "5b452fbc864bf2ee",
+            "name" : "Details",
+            "source" : "5b452fbc864bf2ee.html",
+            "type" : "text/plain",
+            "size" : 38
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 2,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Fill 'Login Form' with User(name:Roman; password:Jdi1234) and press 'enter'",
+          "time" : {
+            "start" : 1629829823711,
+            "stop" : 1629829826909,
+            "duration" : 3198
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Input 'Roman' in 'Name'",
+            "time" : {
+              "start" : 1629829823745,
+              "stop" : 1629829824556,
+              "duration" : 811
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : false
+          }, {
+            "name" : "Input 'Jdi1234' in 'Password'",
+            "time" : {
+              "start" : 1629829824559,
+              "stop" : 1629829825403,
+              "duration" : 844
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : false
+          }, {
+            "name" : "Submit 'Login Form' and press 'enter' button",
+            "time" : {
+              "start" : 1629829825407,
+              "stop" : 1629829826909,
+              "duration" : 1502
+            },
+            "status" : "passed",
+            "steps" : [ {
+              "name" : "Click on 'enter'",
+              "time" : {
+                "start" : 1629829825518,
+                "stop" : 1629829826909,
+                "duration" : 1391
+              },
+              "status" : "passed",
+              "steps" : [ {
+                "name" : "Check that 'enter' is disabled",
+                "time" : {
+                  "start" : 1629829825543,
+                  "stop" : 1629829826425,
+                  "duration" : 882
+                },
+                "status" : "passed",
+                "steps" : [ ],
+                "attachments" : [ {
+                  "uid" : "18d1ae71189c820c",
+                  "name" : "Actual result",
+                  "source" : "18d1ae71189c820c.html",
+                  "type" : "text/plain",
+                  "size" : 5
+                } ],
+                "parameters" : [ ],
+                "stepsCount" : 0,
+                "attachmentsCount" : 1,
+                "shouldDisplayMessage" : false,
+                "hasContent" : true
+              } ],
+              "attachments" : [ ],
+              "parameters" : [ ],
+              "stepsCount" : 1,
+              "attachmentsCount" : 1,
+              "shouldDisplayMessage" : false,
+              "hasContent" : true
+            } ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "stepsCount" : 2,
+            "attachmentsCount" : 1,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ {
+            "uid" : "aced3123019755f2",
+            "name" : "Details",
+            "source" : "aced3123019755f2.html",
+            "type" : "text/plain",
+            "size" : 30
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 5,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 9,
+        "attachmentsCount" : 4,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 12,
+      "attachmentsCount" : 5,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "'Contact Form Page'(url=https://jdi-testing.github.io/jdi-light/contacts.html) should be opened",
+      "time" : {
+        "start" : 1629829826910,
+        "stop" : 1629829827585,
+        "duration" : 675
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "'Contact Form Page'(url=https://jdi-testing.github.io/jdi-light/contacts.html) should be opened",
+        "time" : {
+          "start" : 1629829826916,
+          "stop" : 1629829827585,
+          "duration" : 669
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Open 'Contact Form Page'(url=https://jdi-testing.github.io/jdi-light/contacts.html)",
+          "time" : {
+            "start" : 1629829826924,
+            "stop" : 1629829827553,
+            "duration" : 629
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Check that 'Contact Form Page' is opened (url CONTAINS '/contacts.html'; title EQUALS 'Contact Form')",
+          "time" : {
+            "start" : 1629829827554,
+            "stop" : 1629829827585,
+            "duration" : 31
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ {
+        "uid" : "c4a69e4638ae959b",
+        "name" : "Details",
+        "source" : "c4a69e4638ae959b.html",
+        "type" : "text/plain",
+        "size" : 146
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Submit 'Contact Form' with Contacts(firstName:Roman; lastName:Iovlev; acceptConditions:true; position:ChiefQA; passportNumber:4321; passportSeria:123456; description:JDI - awesome UI automation tool; gender:Female; weather:Sun, Rain; passport:true)",
+      "time" : {
+        "start" : 1629829827604,
+        "stop" : 1629829852976,
+        "duration" : 25372
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Fill 'Contact Form' with Contacts(firstName:Roman; lastName:Iovlev; acceptConditions:true; position:ChiefQA; passportNumber:4321; passportSeria:123456; description:JDI - awesome UI automation tool; gender:Female; weather:Sun, Rain; passport:true) and press 'submit'",
+        "time" : {
+          "start" : 1629829827625,
+          "stop" : 1629829852976,
+          "duration" : 25351
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Show",
+          "time" : {
+            "start" : 1629829827654,
+            "stop" : 1629829828367,
+            "duration" : 713
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Check that 'First Name' is visible by user",
+            "time" : {
+              "start" : 1629829827934,
+              "stop" : 1629829828367,
+              "duration" : 433
+            },
+            "status" : "passed",
+            "steps" : [ {
+              "name" : "Check that 'First Name' is hidden",
+              "time" : {
+                "start" : 1629829827938,
+                "stop" : 1629829828188,
+                "duration" : 250
+              },
+              "status" : "passed",
+              "steps" : [ ],
+              "attachments" : [ {
+                "uid" : "a0cf1261f2ec7cc3",
+                "name" : "Actual result",
+                "source" : "a0cf1261f2ec7cc3.html",
+                "type" : "text/plain",
+                "size" : 5
+              } ],
+              "parameters" : [ ],
+              "stepsCount" : 0,
+              "attachmentsCount" : 1,
+              "shouldDisplayMessage" : false,
+              "hasContent" : true
+            } ],
+            "attachments" : [ {
+              "uid" : "82c84ed45ec4e12c",
+              "name" : "Actual result",
+              "source" : "82c84ed45ec4e12c.html",
+              "type" : "text/plain",
+              "size" : 4
+            } ],
+            "parameters" : [ ],
+            "stepsCount" : 1,
+            "attachmentsCount" : 2,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 2,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Input 'Roman' in 'First Name'",
+          "time" : {
+            "start" : 1629829828555,
+            "stop" : 1629829829287,
+            "duration" : 732
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Check that 'Last Name' is visible by user",
+          "time" : {
+            "start" : 1629829829548,
+            "stop" : 1629829830073,
+            "duration" : 525
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Check that 'Last Name' is hidden",
+            "time" : {
+              "start" : 1629829829552,
+              "stop" : 1629829829884,
+              "duration" : 332
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ {
+              "uid" : "e3d29c7a81e778e7",
+              "name" : "Actual result",
+              "source" : "e3d29c7a81e778e7.html",
+              "type" : "text/plain",
+              "size" : 5
+            } ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 1,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ {
+            "uid" : "ccc288b14236036c",
+            "name" : "Actual result",
+            "source" : "ccc288b14236036c.html",
+            "type" : "text/plain",
+            "size" : 4
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Input 'Iovlev' in 'Last Name'",
+          "time" : {
+            "start" : 1629829830253,
+            "stop" : 1629829831010,
+            "duration" : 757
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Check 'Accept Conditions'",
+          "time" : {
+            "start" : 1629829831012,
+            "stop" : 1629829832970,
+            "duration" : 1958
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Check that 'Accept Conditions' is selected",
+            "time" : {
+              "start" : 1629829831015,
+              "stop" : 1629829831922,
+              "duration" : 907
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ {
+              "uid" : "2d91f4b7cf2808b9",
+              "name" : "Actual result",
+              "source" : "2d91f4b7cf2808b9.html",
+              "type" : "text/plain",
+              "size" : 5
+            } ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 1,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          }, {
+            "name" : "Check that 'Accept Conditions label' is displayed",
+            "time" : {
+              "start" : 1629829832030,
+              "stop" : 1629829832148,
+              "duration" : 118
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ {
+              "uid" : "66ce866770e42279",
+              "name" : "Actual result",
+              "source" : "66ce866770e42279.html",
+              "type" : "text/plain",
+              "size" : 4
+            } ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 1,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          }, {
+            "name" : "Click on 'Accept Conditions label'",
+            "time" : {
+              "start" : 1629829832268,
+              "stop" : 1629829832970,
+              "duration" : 702
+            },
+            "status" : "passed",
+            "steps" : [ {
+              "name" : "Check that 'Accept Conditions label' is disabled",
+              "time" : {
+                "start" : 1629829832322,
+                "stop" : 1629829832752,
+                "duration" : 430
+              },
+              "status" : "passed",
+              "steps" : [ ],
+              "attachments" : [ {
+                "uid" : "a5bc587652455c6a",
+                "name" : "Actual result",
+                "source" : "a5bc587652455c6a.html",
+                "type" : "text/plain",
+                "size" : 5
+              } ],
+              "parameters" : [ ],
+              "stepsCount" : 0,
+              "attachmentsCount" : 1,
+              "shouldDisplayMessage" : false,
+              "hasContent" : true
+            } ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "stepsCount" : 1,
+            "attachmentsCount" : 1,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 4,
+          "attachmentsCount" : 3,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Check that 'Position' is visible by user",
+          "time" : {
+            "start" : 1629829833213,
+            "stop" : 1629829833451,
+            "duration" : 238
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Check that 'Position' is hidden",
+            "time" : {
+              "start" : 1629829833216,
+              "stop" : 1629829833340,
+              "duration" : 124
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ {
+              "uid" : "31c1efda0779acf9",
+              "name" : "Actual result",
+              "source" : "31c1efda0779acf9.html",
+              "type" : "text/plain",
+              "size" : 5
+            } ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 1,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ {
+            "uid" : "fe6b7cb0ede3dcc1",
+            "name" : "Actual result",
+            "source" : "fe6b7cb0ede3dcc1.html",
+            "type" : "text/plain",
+            "size" : 5
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Input 'ChiefQA' in 'Position'",
+          "time" : {
+            "start" : 1629829833833,
+            "stop" : 1629829834547,
+            "duration" : 714
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Check that 'Passport Number' is visible by user",
+          "time" : {
+            "start" : 1629829834812,
+            "stop" : 1629829835292,
+            "duration" : 480
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Check that 'Passport Number' is hidden",
+            "time" : {
+              "start" : 1629829834824,
+              "stop" : 1629829835092,
+              "duration" : 268
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ {
+              "uid" : "52b75603b18642c7",
+              "name" : "Actual result",
+              "source" : "52b75603b18642c7.html",
+              "type" : "text/plain",
+              "size" : 5
+            } ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 1,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ {
+            "uid" : "88122bdd98ca6ddc",
+            "name" : "Actual result",
+            "source" : "88122bdd98ca6ddc.html",
+            "type" : "text/plain",
+            "size" : 4
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Input '4321' in 'Passport Number'",
+          "time" : {
+            "start" : 1629829835501,
+            "stop" : 1629829836288,
+            "duration" : 787
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Check that 'Passport Seria' is visible by user",
+          "time" : {
+            "start" : 1629829836573,
+            "stop" : 1629829837047,
+            "duration" : 474
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Check that 'Passport Seria' is hidden",
+            "time" : {
+              "start" : 1629829836590,
+              "stop" : 1629829836896,
+              "duration" : 306
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ {
+              "uid" : "eaa4ec5807281d48",
+              "name" : "Actual result",
+              "source" : "eaa4ec5807281d48.html",
+              "type" : "text/plain",
+              "size" : 5
+            } ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 1,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ {
+            "uid" : "78b28384aa7c135",
+            "name" : "Actual result",
+            "source" : "78b28384aa7c135.html",
+            "type" : "text/plain",
+            "size" : 4
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Input '123456' in 'Passport Seria'",
+          "time" : {
+            "start" : 1629829837168,
+            "stop" : 1629829837874,
+            "duration" : 706
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Input 'JDI - awesome UI automation tool' in 'Description'",
+          "time" : {
+            "start" : 1629829837875,
+            "stop" : 1629829838588,
+            "duration" : 713
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Select 'Female' in 'Gender'",
+          "time" : {
+            "start" : 1629829838590,
+            "stop" : 1629829839137,
+            "duration" : 547
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Check that 'valuesContainer' is hidden",
+          "time" : {
+            "start" : 1629829839140,
+            "stop" : 1629829839437,
+            "duration" : 297
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "5309a03bcfcad44a",
+            "name" : "Actual result",
+            "source" : "5309a03bcfcad44a.html",
+            "type" : "text/plain",
+            "size" : 4
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Click on 'expandArrow'",
+          "time" : {
+            "start" : 1629829839439,
+            "stop" : 1629829840828,
+            "duration" : 1389
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Check that 'expandArrow' is disabled",
+            "time" : {
+              "start" : 1629829839443,
+              "stop" : 1629829840440,
+              "duration" : 997
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ {
+              "uid" : "fd181b7f82006173",
+              "name" : "Actual result",
+              "source" : "fd181b7f82006173.html",
+              "type" : "text/plain",
+              "size" : 5
+            } ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 1,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Get '' text",
+          "time" : {
+            "start" : 1629829841272,
+            "stop" : 1629829841422,
+            "duration" : 150
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "d5d9c316487f5607",
+            "name" : "Actual result",
+            "source" : "d5d9c316487f5607.html",
+            "type" : "text/plain",
+            "size" : 3
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Check that 'input' is selected",
+          "time" : {
+            "start" : 1629829841706,
+            "stop" : 1629829842887,
+            "duration" : 1181
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "18f95aba331dbb52",
+            "name" : "Actual result",
+            "source" : "18f95aba331dbb52.html",
+            "type" : "text/plain",
+            "size" : 5
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Click on 'valueTemplate'",
+          "time" : {
+            "start" : 1629829842888,
+            "stop" : 1629829844406,
+            "duration" : 1518
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Check that 'valueTemplate' is disabled",
+            "time" : {
+              "start" : 1629829842893,
+              "stop" : 1629829843976,
+              "duration" : 1083
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ {
+              "uid" : "469d8fcd443f7091",
+              "name" : "Actual result",
+              "source" : "469d8fcd443f7091.html",
+              "type" : "text/plain",
+              "size" : 5
+            } ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 1,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Click on 'Weather label'",
+          "time" : {
+            "start" : 1629829849593,
+            "stop" : 1629829850158,
+            "duration" : 565
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Check that 'Weather label' is disabled",
+            "time" : {
+              "start" : 1629829849598,
+              "stop" : 1629829849954,
+              "duration" : 356
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ {
+              "uid" : "5e2d7a70ed2c170c",
+              "name" : "Actual result",
+              "source" : "5e2d7a70ed2c170c.html",
+              "type" : "text/plain",
+              "size" : 5
+            } ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 1,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Check 'Passport'",
+          "time" : {
+            "start" : 1629829850159,
+            "stop" : 1629829851971,
+            "duration" : 1812
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Check that 'Passport' is selected",
+            "time" : {
+              "start" : 1629829850160,
+              "stop" : 1629829850993,
+              "duration" : 833
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ {
+              "uid" : "4d239f3613d06866",
+              "name" : "Actual result",
+              "source" : "4d239f3613d06866.html",
+              "type" : "text/plain",
+              "size" : 5
+            } ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 1,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          }, {
+            "name" : "Check that 'Passport label' is displayed",
+            "time" : {
+              "start" : 1629829851157,
+              "stop" : 1629829851279,
+              "duration" : 122
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ {
+              "uid" : "b74620f2fb214f68",
+              "name" : "Actual result",
+              "source" : "b74620f2fb214f68.html",
+              "type" : "text/plain",
+              "size" : 4
+            } ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 1,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          }, {
+            "name" : "Click on 'Passport label'",
+            "time" : {
+              "start" : 1629829851408,
+              "stop" : 1629829851971,
+              "duration" : 563
+            },
+            "status" : "passed",
+            "steps" : [ {
+              "name" : "Check that 'Passport label' is disabled",
+              "time" : {
+                "start" : 1629829851442,
+                "stop" : 1629829851778,
+                "duration" : 336
+              },
+              "status" : "passed",
+              "steps" : [ ],
+              "attachments" : [ {
+                "uid" : "4cf70e4ec4fff8a0",
+                "name" : "Actual result",
+                "source" : "4cf70e4ec4fff8a0.html",
+                "type" : "text/plain",
+                "size" : 5
+              } ],
+              "parameters" : [ ],
+              "stepsCount" : 0,
+              "attachmentsCount" : 1,
+              "shouldDisplayMessage" : false,
+              "hasContent" : true
+            } ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "stepsCount" : 1,
+            "attachmentsCount" : 1,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 4,
+          "attachmentsCount" : 3,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Submit 'Contact Form' and press 'submit' button",
+          "time" : {
+            "start" : 1629829851972,
+            "stop" : 1629829852976,
+            "duration" : 1004
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Click on 'submit'",
+            "time" : {
+              "start" : 1629829851973,
+              "stop" : 1629829852976,
+              "duration" : 1003
+            },
+            "status" : "passed",
+            "steps" : [ {
+              "name" : "Check that 'submit' is disabled",
+              "time" : {
+                "start" : 1629829851995,
+                "stop" : 1629829852741,
+                "duration" : 746
+              },
+              "status" : "passed",
+              "steps" : [ ],
+              "attachments" : [ {
+                "uid" : "961d583b00e36de2",
+                "name" : "Actual result",
+                "source" : "961d583b00e36de2.html",
+                "type" : "text/plain",
+                "size" : 5
+              } ],
+              "parameters" : [ ],
+              "stepsCount" : 0,
+              "attachmentsCount" : 1,
+              "shouldDisplayMessage" : false,
+              "hasContent" : true
+            } ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "stepsCount" : 1,
+            "attachmentsCount" : 1,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 2,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 40,
+        "attachmentsCount" : 23,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ {
+        "uid" : "ecbb8da15689a6a8",
+        "name" : "Details",
+        "source" : "ecbb8da15689a6a8.html",
+        "type" : "text/plain",
+        "size" : 53
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 41,
+      "attachmentsCount" : 24,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Check that 'Contact Form' values are: First Name:Roman,Last Name:Iovlev,Accept Conditions:true,Position:ChiefQA,Passport Number:4321,Passport Seria:123456,Description:JDI - awesome UI automation tool,Gender:Female,Weather:Sun, Rain,Passport:true",
+      "time" : {
+        "start" : 1629829852977,
+        "stop" : 1629829854961,
+        "duration" : 1984
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Show",
+        "time" : {
+          "start" : 1629829852982,
+          "stop" : 1629829853238,
+          "duration" : 256
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Check that 'Contact Form' is visible by user",
+          "time" : {
+            "start" : 1629829853070,
+            "stop" : 1629829853238,
+            "duration" : 168
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Check that 'Contact Form' is hidden",
+            "time" : {
+              "start" : 1629829853072,
+              "stop" : 1629829853152,
+              "duration" : 80
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ {
+              "uid" : "5642e58536e752ac",
+              "name" : "Actual result",
+              "source" : "5642e58536e752ac.html",
+              "type" : "text/plain",
+              "size" : 5
+            } ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 1,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ {
+            "uid" : "9d2ecf46e6bd7179",
+            "name" : "Actual result",
+            "source" : "9d2ecf46e6bd7179.html",
+            "type" : "text/plain",
+            "size" : 4
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 2,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Check that 'Contact Form' values are: First Name:Roman,Last Name:Iovlev,Accept Conditions:true,Position:ChiefQA,Passport Number:4321,Passport Seria:123456,Description:JDI - awesome UI automation tool,Gender:Female,Weather:Sun, Rain,Passport:true",
+        "time" : {
+          "start" : 1629829853240,
+          "stop" : 1629829854961,
+          "duration" : 1721
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Get 'First Name' text",
+          "time" : {
+            "start" : 1629829853242,
+            "stop" : 1629829853371,
+            "duration" : 129
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "842216146d442fc3",
+            "name" : "Actual result",
+            "source" : "842216146d442fc3.html",
+            "type" : "text/plain",
+            "size" : 5
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Get 'Last Name' text",
+          "time" : {
+            "start" : 1629829853372,
+            "stop" : 1629829853479,
+            "duration" : 107
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "9b680e4141be4085",
+            "name" : "Actual result",
+            "source" : "9b680e4141be4085.html",
+            "type" : "text/plain",
+            "size" : 6
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Get 'Position' text",
+          "time" : {
+            "start" : 1629829853480,
+            "stop" : 1629829853637,
+            "duration" : 157
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "e6c0e8d8ed8ef186",
+            "name" : "Actual result",
+            "source" : "e6c0e8d8ed8ef186.html",
+            "type" : "text/plain",
+            "size" : 7
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Get 'Passport Number' text",
+          "time" : {
+            "start" : 1629829853638,
+            "stop" : 1629829853721,
+            "duration" : 83
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "2b517473b0eacdd0",
+            "name" : "Actual result",
+            "source" : "2b517473b0eacdd0.html",
+            "type" : "text/plain",
+            "size" : 4
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Get 'Passport Seria' text",
+          "time" : {
+            "start" : 1629829853722,
+            "stop" : 1629829853847,
+            "duration" : 125
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "ce1c85bb75701648",
+            "name" : "Actual result",
+            "source" : "ce1c85bb75701648.html",
+            "type" : "text/plain",
+            "size" : 6
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Get selected value",
+          "time" : {
+            "start" : 1629829853847,
+            "stop" : 1629829854217,
+            "duration" : 370
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Check that 'Gender' is displayed",
+            "time" : {
+              "start" : 1629829853848,
+              "stop" : 1629829854217,
+              "duration" : 369
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ {
+              "uid" : "8e3d5c3a7b623db2",
+              "name" : "Actual result",
+              "source" : "8e3d5c3a7b623db2.html",
+              "type" : "text/plain",
+              "size" : 6
+            } ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 1,
+            "shouldDisplayMessage" : false,
+            "hasContent" : true
+          } ],
+          "attachments" : [ {
+            "uid" : "54ae2e0122996052",
+            "name" : "Actual result",
+            "source" : "54ae2e0122996052.html",
+            "type" : "text/plain",
+            "size" : 6
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 1,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Get 'value' text",
+          "time" : {
+            "start" : 1629829854218,
+            "stop" : 1629829854511,
+            "duration" : 293
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "f2165d315a8ba4c6",
+            "name" : "Actual result",
+            "source" : "f2165d315a8ba4c6.html",
+            "type" : "text/plain",
+            "size" : 9
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Check that 'Passport' is selected",
+          "time" : {
+            "start" : 1629829854512,
+            "stop" : 1629829854665,
+            "duration" : 153
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "c3d7dcc886d6f4c5",
+            "name" : "Actual result",
+            "source" : "c3d7dcc886d6f4c5.html",
+            "type" : "text/plain",
+            "size" : 4
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Check that 'Accept Conditions' is selected",
+          "time" : {
+            "start" : 1629829854666,
+            "stop" : 1629829854829,
+            "duration" : 163
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "76d0847cc385402d",
+            "name" : "Actual result",
+            "source" : "76d0847cc385402d.html",
+            "type" : "text/plain",
+            "size" : 4
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 10,
+        "attachmentsCount" : 10,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ {
+        "uid" : "84fc611d3e08bb8d",
+        "name" : "Details",
+        "source" : "84fc611d3e08bb8d.html",
+        "type" : "text/plain",
+        "size" : 53
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 14,
+      "attachmentsCount" : 13,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 74,
+    "attachmentsCount" : 43,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "teardown",
+    "time" : {
+      "start" : 1629829979429,
+      "stop" : 1629829979466,
+      "duration" : 37
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "org.mytests.tests.example.FormTests"
+  }, {
+    "name" : "testClass",
+    "value" : "org.mytests.tests.example.FormTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "fillContactFormTest"
+  }, {
+    "name" : "parentSuite",
+    "value" : "JDI-Light Performance"
+  }, {
+    "name" : "suite",
+    "value" : "Tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "org.mytests.tests.example.FormTests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az281-863"
+  }, {
+    "name" : "thread",
+    "value" : "3890@fv-az281-863.TestNG-test=Tests-5(19)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 4,
+        "passed" : 38,
+        "unknown" : 0,
+        "total" : 42
+      },
+      "items" : [ {
+        "uid" : "a76b0bb39a93c060",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/12//#testresult/a76b0bb39a93c060",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629829579629,
+          "stop" : 1629829619722,
+          "duration" : 40093
+        }
+      }, {
+        "uid" : "c1e0f8ea3bb5ac60",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/11//#testresult/c1e0f8ea3bb5ac60",
+        "status" : "skipped",
+        "statusDetails" : "Can't init 'page' 'performancePage' on 'SiteJdi'",
+        "time" : {
+          "start" : 1629828931258,
+          "stop" : 1629828931258,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "96795b510ac9d958",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/11//#testresult/96795b510ac9d958",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629828669689,
+          "stop" : 1629828716506,
+          "duration" : 46817
+        }
+      }, {
+        "uid" : "dccdbdcd4993aa2d",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/11//#testresult/dccdbdcd4993aa2d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629828463216,
+          "stop" : 1629828503243,
+          "duration" : 40027
+        }
+      }, {
+        "uid" : "f497e8c6718d9859",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/11//#testresult/f497e8c6718d9859",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629828227258,
+          "stop" : 1629828278405,
+          "duration" : 51147
+        }
+      }, {
+        "uid" : "84afdd098ffd7714",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/11//#testresult/84afdd098ffd7714",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629828016370,
+          "stop" : 1629828050517,
+          "duration" : 34147
+        }
+      }, {
+        "uid" : "fcfc2bfbb3dd24d9",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/11//#testresult/fcfc2bfbb3dd24d9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629827799774,
+          "stop" : 1629827840511,
+          "duration" : 40737
+        }
+      }, {
+        "uid" : "2d8a85de392f1608",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/11//#testresult/2d8a85de392f1608",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629827578804,
+          "stop" : 1629827620678,
+          "duration" : 41874
+        }
+      }, {
+        "uid" : "60fddc0351f14c3c",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/11//#testresult/60fddc0351f14c3c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629827373568,
+          "stop" : 1629827411597,
+          "duration" : 38029
+        }
+      }, {
+        "uid" : "55b16d40e1f32c05",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/11//#testresult/55b16d40e1f32c05",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629827149342,
+          "stop" : 1629827188016,
+          "duration" : 38674
+        }
+      }, {
+        "uid" : "71a2e8af7b63c850",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/10//#testresult/71a2e8af7b63c850",
+        "status" : "skipped",
+        "statusDetails" : "Can't init 'page' 'performancePage' on 'SiteJdi'",
+        "time" : {
+          "start" : 1629826526539,
+          "stop" : 1629826526539,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "8e2a3e1b1a3a2d4b",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/10//#testresult/8e2a3e1b1a3a2d4b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629826295682,
+          "stop" : 1629826330636,
+          "duration" : 34954
+        }
+      }, {
+        "uid" : "471aa1534ccbbcbd",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/10//#testresult/471aa1534ccbbcbd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629826080985,
+          "stop" : 1629826122703,
+          "duration" : 41718
+        }
+      }, {
+        "uid" : "a58bd9460e39255",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/10//#testresult/a58bd9460e39255",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629825866645,
+          "stop" : 1629825910824,
+          "duration" : 44179
+        }
+      }, {
+        "uid" : "8d9afd571220605a",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/10//#testresult/8d9afd571220605a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629825665233,
+          "stop" : 1629825700883,
+          "duration" : 35650
+        }
+      }, {
+        "uid" : "152069482e328b4f",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/10//#testresult/152069482e328b4f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629825465188,
+          "stop" : 1629825502674,
+          "duration" : 37486
+        }
+      }, {
+        "uid" : "b3ce4aadef198a2c",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/10//#testresult/b3ce4aadef198a2c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629825223022,
+          "stop" : 1629825274268,
+          "duration" : 51246
+        }
+      }, {
+        "uid" : "b1b9baca4ef4c70f",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/10//#testresult/b1b9baca4ef4c70f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629824973985,
+          "stop" : 1629825014147,
+          "duration" : 40162
+        }
+      }, {
+        "uid" : "9e22d25a54b4b65e",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/10//#testresult/9e22d25a54b4b65e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629824773271,
+          "stop" : 1629824808109,
+          "duration" : 34838
+        }
+      }, {
+        "uid" : "a9b6107efb8bc9cd",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/9//#testresult/a9b6107efb8bc9cd",
+        "status" : "skipped",
+        "statusDetails" : "Can't init 'page' 'performancePage' on 'SiteJdi'",
+        "time" : {
+          "start" : 1629813444653,
+          "stop" : 1629813444653,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "ebd3710a2dda0b42.json",
+  "parameterValues" : [ ]
+}

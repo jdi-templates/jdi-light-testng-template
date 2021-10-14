@@ -1,0 +1,303 @@
+{
+  "uid" : "b2cee0a567d325d6",
+  "name" : "exactMatcherTest",
+  "fullName" : "org.mytests.tests.example.DataTableTests.exactMatcherTest",
+  "historyId" : "cfd427881319d77d940491fc01afc045",
+  "time" : {
+    "start" : 1634224233398,
+    "stop" : 1634224233410,
+    "duration" : 12
+  },
+  "status" : "skipped",
+  "statusMessage" : "java.lang.NullPointerException",
+  "statusTrace" : "java.lang.RuntimeException: java.lang.NullPointerException\n\tat com.jdiai.tools.func.JFunc2.execute(JFunc2.java:21)\n\tat com.epam.jdi.light.actions.ActionProcessor.stepAround(ActionProcessor.java:87)\n\tat org.mytests.tests.states.States.shouldBeLoggedIn(States.java:19)\n\tat org.mytests.tests.example.DataTableTests.before(DataTableTests.java:33)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)\n\tat org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)\n\tat org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)\n\tat org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)\n\tat org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)\n\tat java.base/java.lang.Thread.run(Thread.java:832)\nCaused by: java.lang.NullPointerException\n\tat com.epam.jdi.light.actions.ActionHelper.actionFailed(ActionHelper.java:366)\n\tat com.jdiai.tools.func.JFunc2.execute(JFunc2.java:19)\n\t... 22 more\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "before",
+    "time" : {
+      "start" : 1634224233395,
+      "stop" : 1634224233395,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "broken",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1634224230269,
+      "stop" : 1634224232806,
+      "duration" : 2537
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "teardown",
+    "time" : {
+      "start" : 1634224285585,
+      "stop" : 1634224285641,
+      "duration" : 56
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "org.mytests.tests.example.DataTableTests"
+  }, {
+    "name" : "testClass",
+    "value" : "org.mytests.tests.example.DataTableTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "exactMatcherTest"
+  }, {
+    "name" : "parentSuite",
+    "value" : "JDI-Light Performance"
+  }, {
+    "name" : "suite",
+    "value" : "Tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "org.mytests.tests.example.DataTableTests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az281-534"
+  }, {
+    "name" : "thread",
+    "value" : "4083@fv-az281-534.TestNG-test=Tests-2(19)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 5,
+        "passed" : 58,
+        "unknown" : 0,
+        "total" : 63
+      },
+      "items" : [ {
+        "uid" : "e1eda61ae69c7ade",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/14//#testresult/e1eda61ae69c7ade",
+        "status" : "passed",
+        "time" : {
+          "start" : 1634224031491,
+          "stop" : 1634224036091,
+          "duration" : 4600
+        }
+      }, {
+        "uid" : "e2edf6f9e420b687",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/14//#testresult/e2edf6f9e420b687",
+        "status" : "passed",
+        "time" : {
+          "start" : 1634223725689,
+          "stop" : 1634223731822,
+          "duration" : 6133
+        }
+      }, {
+        "uid" : "3ff9c8df4dfb1bb2",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/14//#testresult/3ff9c8df4dfb1bb2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1634223446571,
+          "stop" : 1634223452179,
+          "duration" : 5608
+        }
+      }, {
+        "uid" : "18aefc861ababadd",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/14//#testresult/18aefc861ababadd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1634223175850,
+          "stop" : 1634223182788,
+          "duration" : 6938
+        }
+      }, {
+        "uid" : "cef30c6a3d9da4c3",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/14//#testresult/cef30c6a3d9da4c3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1634222914670,
+          "stop" : 1634222921405,
+          "duration" : 6735
+        }
+      }, {
+        "uid" : "b99dfa7afcf1c09f",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/14//#testresult/b99dfa7afcf1c09f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1634222590829,
+          "stop" : 1634222600309,
+          "duration" : 9480
+        }
+      }, {
+        "uid" : "14475758a104089f",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/13//#testresult/14475758a104089f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629838661076,
+          "stop" : 1629838667279,
+          "duration" : 6203
+        }
+      }, {
+        "uid" : "87df4dbc5924e312",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/13//#testresult/87df4dbc5924e312",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629838400218,
+          "stop" : 1629838405499,
+          "duration" : 5281
+        }
+      }, {
+        "uid" : "e85612f1b9ffd01",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/13//#testresult/e85612f1b9ffd01",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629838147411,
+          "stop" : 1629838153171,
+          "duration" : 5760
+        }
+      }, {
+        "uid" : "81cad1a1e2e04325",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/13//#testresult/81cad1a1e2e04325",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629837894090,
+          "stop" : 1629837901856,
+          "duration" : 7766
+        }
+      }, {
+        "uid" : "dd9f5f9dcf83517b",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/13//#testresult/dd9f5f9dcf83517b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629837650745,
+          "stop" : 1629837655607,
+          "duration" : 4862
+        }
+      }, {
+        "uid" : "2f50e305a60fb466",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/13//#testresult/2f50e305a60fb466",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629837420053,
+          "stop" : 1629837425485,
+          "duration" : 5432
+        }
+      }, {
+        "uid" : "eeb5ad49fa64cf62",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/13//#testresult/eeb5ad49fa64cf62",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629836965076,
+          "stop" : 1629836973062,
+          "duration" : 7986
+        }
+      }, {
+        "uid" : "f251a62a652cd4c1",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/13//#testresult/f251a62a652cd4c1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629836708947,
+          "stop" : 1629836715973,
+          "duration" : 7026
+        }
+      }, {
+        "uid" : "f1007252f2c7f896",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/12//#testresult/f1007252f2c7f896",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629831500728,
+          "stop" : 1629831514436,
+          "duration" : 13708
+        }
+      }, {
+        "uid" : "3030a9aa9b205efa",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/12//#testresult/3030a9aa9b205efa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629831246228,
+          "stop" : 1629831250967,
+          "duration" : 4739
+        }
+      }, {
+        "uid" : "d6ec90e80931e4b5",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/12//#testresult/d6ec90e80931e4b5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629831013895,
+          "stop" : 1629831024002,
+          "duration" : 10107
+        }
+      }, {
+        "uid" : "54e4bcba03a49102",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/12//#testresult/54e4bcba03a49102",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629830782417,
+          "stop" : 1629830789097,
+          "duration" : 6680
+        }
+      }, {
+        "uid" : "698896340a9d0292",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/12//#testresult/698896340a9d0292",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629830560036,
+          "stop" : 1629830565966,
+          "duration" : 5930
+        }
+      }, {
+        "uid" : "6a950ef4c72977d1",
+        "reportUrl" : "https://jdi-templates.github.io/jdi-light-testng-template/12//#testresult/6a950ef4c72977d1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1629830319737,
+          "stop" : 1629830325520,
+          "duration" : 5783
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "b2cee0a567d325d6.json",
+  "parameterValues" : [ ]
+}
