@@ -9,7 +9,6 @@ Powered by [JDI Light](https://github.com/jdi-testing/jdi-light) and Selenium
 
 3. For running demo tests:
     * Maven: just use "mvn clean install" command http://pix.my/o/fkSH1s?1547398376
-    * Gradle: just use "gradle clean test" command https://pix.my/Z9NUzh
     * IDE: run by click on "example" folder in src/test and select "Run tests" http://pix.my/o/SJtkya?1547398292
 
 4. Logs: Observe test run results in Console log
