@@ -5,12 +5,14 @@ env:
 on:
   push:
     branches:
-      - '*' # matches every branch
-      - '*/*' # matches every branch containing a single '/'
-      - '!master' # excludes master
+      - master
 
     pull_request:
-      types: [ opened, synchronize ]
+      branches:
+        - master
+    release:
+      types: # This configuration does not affect the page_build event above
+        - created
 
 jobs:
   build:
@@ -37,7 +39,6 @@ jobs:
       - name: Start Selenoid
         uses: n-ton4/selenoid-github-action@master
         id: start-selenoid
-        if: github.event_name == 'pull_request' && success()
         with:
           version: 1.10.1
           args: -limit 6
@@ -46,26 +47,23 @@ jobs:
 
       - name: Check Selenoid has been started
         run: curl http://localhost:4444/status
-        if: github.event_name == 'pull_request' && success()
 
       - name: Tests
         id: ftests
         timeout-minutes: 10
-        if: github.event_name == 'pull_request' && success()
+        continue-on-error: true
         run: mvn test -Pci -ntp
 
       - name: Get Allure history
         uses: actions/checkout@v2
         id: allure-setup
         continue-on-error: true
-        if: github.event_name == 'pull_request' && always()
         with:
           ref: gh-pages
           path: gh-pages
 
       - name: Generate Allure report
         uses: simple-elf/allure-report-action@master
-        if: github.event_name == 'pull_request' && always()
         with:
           allure_results: target/allure-results
           allure_report: target/allure-report
@@ -73,13 +71,11 @@ jobs:
 
       - name: Upload Allure report
         uses: actions/upload-artifact@master
-        if: github.event_name == 'pull_request' && always()
         with:
           name: Allure report
           path: target/allure-report
 
       - name: Deploy Allure report to Github Pages
-        if: github.event_name == 'pull_request' && always()
         uses: peaceiris/actions-gh-pages@v2
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
