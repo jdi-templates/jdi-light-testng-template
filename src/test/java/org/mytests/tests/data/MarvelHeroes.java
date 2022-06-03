@@ -1,4 +1,4 @@
-package org.mytests.tests.test.data;
+package org.mytests.tests.data;
 
 import org.mytests.uiobjects.example.entities.MarvelUserInfo;
 

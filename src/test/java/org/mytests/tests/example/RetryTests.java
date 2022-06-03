@@ -1,6 +1,6 @@
-package org.mytests.tests.test.example;
+package org.mytests.tests.example;
 
-import org.mytests.tests.test.TestsInit;
+import org.mytests.tests.TestsInit;
 
 public class RetryTests implements TestsInit {
 /*

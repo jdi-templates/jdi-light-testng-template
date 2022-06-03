@@ -1,6 +1,6 @@
-package org.mytests.tests.test;
+package org.mytests.tests;
 
-import org.mytests.tests.test.testng.TestNGListener;
+import org.mytests.tests.testng.TestNGListener;
 import org.mytests.uiobjects.example.site.SiteJdi;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;

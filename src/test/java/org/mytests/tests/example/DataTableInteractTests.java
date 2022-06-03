@@ -1,5 +1,6 @@
-package org.mytests.tests.test.example;
+package org.mytests.tests.example;
 
+import org.mytests.tests.states.States;
 import org.mytests.tests.TestsInit;
 import org.mytests.tests.testng.TestNGListener;
 import org.mytests.uiobjects.example.custom.MarvelUser;
@@ -10,7 +11,6 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 import static org.hamcrest.Matchers.is;
-import static org.mytests.tests.states.States.shouldBeLoggedIn;
 import static org.mytests.uiobjects.example.site.SiteJdi.usersPage;
 import static org.mytests.uiobjects.example.site.pages.UsersPage.users;
 import static org.mytests.uiobjects.example.site.pages.UsersPage.usersSetup;
@@ -21,7 +21,7 @@ public class DataTableInteractTests implements TestsInit {
 
     @BeforeMethod
     public void before() {
-        shouldBeLoggedIn();
+        States.shouldBeLoggedIn();
         usersPage.shouldBeOpened();
     }
 

@@ -1,7 +1,7 @@
-package org.mytests.tests.test.testng;
+package org.mytests.tests.testng;
 
+import org.mytests.tests.testng.RetryFailedTestCases;
 import org.testng.IAnnotationTransformer;
-import org.testng.IRetryAnalyzer;
 import org.testng.annotations.ITestAnnotation;
 
 import java.lang.reflect.Constructor;

@@ -1,7 +1,8 @@
-package org.mytests.tests.test.example;
+package org.mytests.tests.example;
 
 import com.epam.jdi.light.elements.complex.table.matchers.ValueMatcher;
-import org.mytests.tests.test.TestsInit;
+import org.mytests.tests.states.States;
+import org.mytests.tests.TestsInit;
 import org.mytests.tests.testng.TestNGListener;
 import org.mytests.uiobjects.example.entities.MarvelUserInfo;
 import org.testng.annotations.BeforeMethod;
@@ -18,8 +19,7 @@ import static java.util.Arrays.asList;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.lessThanOrEqualTo;
-import static org.mytests.tests.test.data.MarvelHeroes.SPIDER_MAN;
-import static org.mytests.tests.test.states.States.shouldBeLoggedIn;
+import static org.mytests.tests.data.MarvelHeroes.SPIDER_MAN;
 import static org.mytests.uiobjects.example.site.SiteJdi.usersPage;
 import static org.mytests.uiobjects.example.site.pages.UsersPage.users;
 import static org.mytests.uiobjects.example.site.pages.UsersPage.usersSetup;
@@ -30,7 +30,7 @@ public class DataTableTests implements TestsInit {
     private boolean firstTime = true;
     @BeforeMethod
     public void before() {
-        shouldBeLoggedIn();
+        States.shouldBeLoggedIn();
         if (firstTime) {
             usersPage.open();
             firstTime = false;

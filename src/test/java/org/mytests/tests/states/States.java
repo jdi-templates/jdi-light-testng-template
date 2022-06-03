@@ -1,4 +1,4 @@
-package org.mytests.tests.test.states;
+package org.mytests.tests.states;
 
 import com.epam.jdi.light.elements.composite.WebPage;
 import io.qameta.allure.Step;

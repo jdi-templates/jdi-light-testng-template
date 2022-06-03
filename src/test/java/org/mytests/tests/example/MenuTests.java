@@ -1,7 +1,7 @@
-package org.mytests.tests.test.example;
+package org.mytests.tests.example;
 
-import org.mytests.tests.test.TestsInit;
-import org.mytests.tests.test.states.States;
+import org.mytests.tests.TestsInit;
+import org.mytests.tests.states.States;
 import org.mytests.tests.testng.TestNGListener;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;

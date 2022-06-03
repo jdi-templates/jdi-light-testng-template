@@ -1,14 +1,13 @@
-package org.mytests.tests.test.example;
+package org.mytests.tests.example;
 
 import com.epam.jdi.light.elements.composite.Form;
-import org.mytests.tests.test.TestsInit;
+import org.mytests.tests.states.States;
+import org.mytests.tests.TestsInit;
 import org.mytests.tests.testng.TestNGListener;
 import org.mytests.uiobjects.example.entities.Contacts;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import static org.mytests.tests.test.states.States.shouldBeLoggedIn;
-import static org.mytests.tests.test.states.States.shouldBeLoggedOut;
 import static org.mytests.uiobjects.example.entities.Defaults.DEFAULT_CONTACT;
 import static org.mytests.uiobjects.example.entities.Defaults.DEFAULT_USER;
 import static org.mytests.uiobjects.example.site.SiteJdi.*;
@@ -19,7 +18,7 @@ public class FormTests implements TestsInit {
 
     @Test
     public void loginTest() {
-        shouldBeLoggedOut();
+        States.shouldBeLoggedOut();
         userIcon.click();
         loginForm.loginAs(DEFAULT_USER);
         homePage.checkOpened();
@@ -27,7 +26,7 @@ public class FormTests implements TestsInit {
 
     @Test
     public void fillContactFormTest() {
-        shouldBeLoggedIn();
+        States.shouldBeLoggedIn();
         contactFormPage.shouldBeOpened();
         contactForm.submit(DEFAULT_CONTACT);
         contactForm.check(DEFAULT_CONTACT);
@@ -35,7 +34,7 @@ public class FormTests implements TestsInit {
 
     @Test
     public void fillContactsTest() {
-        shouldBeLoggedIn();
+        States.shouldBeLoggedIn();
         contactsPage.shouldBeOpened();
         Form<Contacts> contactFrom = contactsPage.asForm();
         contactFrom.submit(DEFAULT_CONTACT);

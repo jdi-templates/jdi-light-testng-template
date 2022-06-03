@@ -21,7 +21,8 @@ import static com.epam.jdi.light.settings.WebSettings.logger;
 import static com.jdiai.tools.LinqUtils.last;
 import static java.lang.System.currentTimeMillis;
 
-public class TestNGListener implements IInvokedMethodListener {    private Safe<Long> start = new Safe<>(0L);
+public class TestNGListener implements IInvokedMethodListener {
+    private Safe<Long> start = new Safe<>(0L);
 
     @Override
     public void beforeInvocation(IInvokedMethod m, ITestResult tr) {
