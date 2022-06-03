@@ -3,8 +3,10 @@ package org.mytests.tests.test.example;
 import com.epam.jdi.light.elements.complex.table.Line;
 import org.apache.commons.lang3.time.StopWatch;
 import org.mytests.tests.test.TestsInit;
+import org.mytests.tests.testng.TestNGListener;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static com.epam.jdi.light.elements.complex.table.Column.inColumn;
@@ -15,6 +17,7 @@ import static org.mytests.uiobjects.example.TestData.TABLE_SNAPSHOOT;
 import static org.mytests.uiobjects.example.site.SiteJdi.performancePage;
 import static org.mytests.uiobjects.example.site.pages.JDIPerformancePage.*;
 
+@Listeners(TestNGListener.class)
 public class JDIPerformanceTests implements TestsInit {
 
     @BeforeMethod

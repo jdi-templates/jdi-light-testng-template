@@ -2,8 +2,10 @@ package org.mytests.tests.test.example;
 
 import com.epam.jdi.light.elements.complex.table.matchers.ValueMatcher;
 import org.mytests.tests.test.TestsInit;
+import org.mytests.tests.testng.TestNGListener;
 import org.mytests.uiobjects.example.entities.MarvelUserInfo;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -23,6 +25,7 @@ import static org.mytests.uiobjects.example.site.pages.UsersPage.users;
 import static org.mytests.uiobjects.example.site.pages.UsersPage.usersSetup;
 import static org.testng.Assert.assertEquals;
 
+@Listeners(TestNGListener.class)
 public class DataTableTests implements TestsInit {
     private boolean firstTime = true;
     @BeforeMethod
@@ -44,7 +47,7 @@ public class DataTableTests implements TestsInit {
     @Test
     public void previewTest() {
         String value = users.preview();
-        assertEquals(value.replace(" ", ""),
+        assertEquals(value.replaceAll(" ", ""),
             "NumberTypeUserDescription1AdminUserManagerRomanWolverineVip2AdminUserManagerSergeyIvanSpiderManVip3AdminUserManagerVladzimirPunisherVip4AdminUserManagerHelenBennettCaptainAmericasomedescriptionVip5AdminUserManagerYoshiTannamuriCyclopesomedescriptionVip6AdminUserManagerGiovanniRovelliHulksomedescriptionVip");
     }
 

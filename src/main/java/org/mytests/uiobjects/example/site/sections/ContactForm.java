@@ -12,6 +12,7 @@ import java.lang.reflect.Field;
 
 import static com.jdiai.tools.ReflectionUtils.isInterface;
 
+
 public class ContactForm extends Form<Contacts> {
 	TextField firstName, lastName, position, passportNumber, passportSeria;
 

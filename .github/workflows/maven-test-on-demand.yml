@@ -1,0 +1,79 @@
+name: Run tests on demand
+env:
+  ALLURE_VERSION: "2.10.0"
+
+on:
+  workflow_dispatch:
+    inputs:
+      java_version:
+        description: Java version
+        default: 1.8
+        required: true
+
+jobs:
+  test:
+    name: Tests on JDK
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK ${{ github.event.inputs.java_version }}
+        uses: actions/setup-java@v1
+        with:
+          java-version: ${{ github.event.inputs.java_version }}
+          java-package: jdk
+
+      - name: Build with Maven
+        id: build
+        run: mvn install -DskipTests -ntp
+
+      - name: Start Selenoid
+        uses: n-ton4/selenoid-github-action@master
+        continue-on-error: false
+        id: start-selenoid
+        with:
+          version: 1.10.1
+          args: -limit 6
+          browsers: chrome:94.0
+          last-versions: 1
+
+      - name: Check Selenoid has been started
+        run: curl http://localhost:4444/status
+
+      - name: Tests
+        id: ftests
+        timeout-minutes: 10
+        run: mvn test -Pci -ntp
+
+      - name: Get Allure history
+        uses: actions/checkout@v2
+        id: allure-setup
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Generate Allure report
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        with:
+          allure_results: target/allure-results
+          allure_report: target/allure-report
+          allure_history: allure-history
+
+      - name: Upload Allure report
+        uses: actions/upload-artifact@master
+        if: always()
+        with:
+          name: Allure report
+          path: target/allure-report
+
+      - name: Deploy Allure report to Github Pages
+        uses: peaceiris/actions-gh-pages@v2
+        if: always()
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: allure-history

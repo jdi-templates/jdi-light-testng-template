@@ -2,13 +2,16 @@ package org.mytests.tests.test.example;
 
 import org.mytests.tests.test.TestsInit;
 import org.mytests.tests.test.states.States;
+import org.mytests.tests.testng.TestNGListener;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.mytests.uiobjects.example.entities.LeftMenuData.*;
 import static org.mytests.uiobjects.example.site.SiteJdi.*;
 import static org.testng.Assert.assertEquals;
 
+@Listeners(TestNGListener.class)
 public class MenuTests implements TestsInit {
     @BeforeMethod
     public void openPerformancePage() {
