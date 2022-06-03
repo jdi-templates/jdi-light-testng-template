@@ -1,25 +1,27 @@
-package org.mytests.tests.example;
+package org.mytests.tests.test.example;
 
-import com.epam.jdi.light.elements.complex.table.Single;
-import org.mytests.tests.TestsInit;
+import com.epam.jdi.light.elements.complex.table.matchers.ValueMatcher;
+import org.mytests.tests.test.TestsInit;
 import org.mytests.uiobjects.example.entities.MarvelUserInfo;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
-import static com.epam.jdi.light.elements.complex.table.Column.*;
-import static com.epam.jdi.light.elements.complex.table.TableMatcher.hasValue;
-import static com.epam.jdi.light.elements.complex.table.TableMatcher.*;
-import static com.epam.jdi.tools.StringUtils.*;
-import static java.util.Arrays.*;
-import static org.apache.commons.lang3.StringUtils.*;
-import static org.hamcrest.Matchers.*;
-import static org.mytests.tests.states.States.*;
-import static org.mytests.tests.test.data.MarvelHeroes.*;
-import static org.mytests.uiobjects.example.site.SiteJdi.*;
-import static org.mytests.uiobjects.example.site.pages.UsersPage.*;
-import static org.testng.Assert.*;
+import static com.epam.jdi.light.elements.complex.table.Column.inColumn;
+import static com.epam.jdi.light.elements.complex.table.matchers.ColumnMatcher.containsValue;
+import static com.epam.jdi.light.elements.complex.table.matchers.ColumnMatcher.hasValue;
+import static com.jdiai.tools.StringUtils.LINE_BREAK;
+import static java.util.Arrays.asList;
+import static org.apache.commons.lang3.StringUtils.isBlank;
+import static org.hamcrest.Matchers.greaterThan;
+import static org.hamcrest.Matchers.lessThanOrEqualTo;
+import static org.mytests.tests.test.data.MarvelHeroes.SPIDER_MAN;
+import static org.mytests.tests.test.states.States.shouldBeLoggedIn;
+import static org.mytests.uiobjects.example.site.SiteJdi.usersPage;
+import static org.mytests.uiobjects.example.site.pages.UsersPage.users;
+import static org.mytests.uiobjects.example.site.pages.UsersPage.usersSetup;
+import static org.testng.Assert.assertEquals;
 
 public class DataTableTests implements TestsInit {
     private boolean firstTime = true;
@@ -42,7 +44,7 @@ public class DataTableTests implements TestsInit {
     @Test
     public void previewTest() {
         String value = users.preview();
-        assertEquals(value.replaceAll(" ", ""),
+        assertEquals(value.replace(" ", ""),
             "NumberTypeUserDescription1AdminUserManagerRomanWolverineVip2AdminUserManagerSergeyIvanSpiderManVip3AdminUserManagerVladzimirPunisherVip4AdminUserManagerHelenBennettCaptainAmericasomedescriptionVip5AdminUserManagerYoshiTannamuriCyclopesomedescriptionVip6AdminUserManagerGiovanniRovelliHulksomedescriptionVip");
     }
 
@@ -94,7 +96,7 @@ public class DataTableTests implements TestsInit {
     }
     @Test
     public void rowTableMatcherSingleTest() {
-        users.has().rowThat(Single.hasValue("Sergey Ivan"), inColumn("User"));
+        users.has().rowThat(ValueMatcher.hasValue("Sergey Ivan"), inColumn("User"));
     }
     @Test
     public void rowTableMatcherTest() {

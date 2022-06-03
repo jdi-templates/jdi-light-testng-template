@@ -10,13 +10,12 @@
     <name>Template: JDI Light TestNG</name>
 
     <properties>
+        <jdi.version>1.4.4</jdi.version>
         <driver>chrome</driver>
-        <domain>https://jdi-testing.github.io/jdi-light/</domain>
-        <!--driver>firefox</driver-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <aspectj.version>1.9.5</aspectj.version>
-        <allure.testng>2.13.3</allure.testng>
-        <allure.maven>2.9</allure.maven>
+        <aspectj.version>1.9.7</aspectj.version>
+        <domain>https://jdi-testing.github.io/jdi-light/</domain>
+        <allure.testng>2.17.2</allure.testng>
         <allure.maven>2.10.0</allure.maven>
         <jetty.version>9.4.12.RC2</jetty.version>
     </properties>
@@ -26,7 +25,7 @@
         <dependency>
             <groupId>com.epam.jdi</groupId>
             <artifactId>jdi-light-html</artifactId>
-            <version>1.2.15</version>
+            <version>${jdi.version}</version>
         </dependency>
 
         <!--Allure-->
@@ -34,12 +33,6 @@
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
             <version>${allure.testng}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.14.3</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 

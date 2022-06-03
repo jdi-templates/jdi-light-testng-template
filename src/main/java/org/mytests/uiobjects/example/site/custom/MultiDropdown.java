@@ -12,13 +12,14 @@ import org.openqa.selenium.By;
 
 import java.util.List;
 
-import static com.epam.jdi.light.driver.WebDriverByUtils.*;
-import static com.epam.jdi.light.elements.init.UIFactory.*;
-import static com.epam.jdi.light.logger.LogLevels.*;
-import static com.epam.jdi.tools.EnumUtils.*;
-import static com.epam.jdi.tools.LinqUtils.*;
-import static java.util.Arrays.*;
-import static org.apache.commons.lang3.StringUtils.*;
+import static com.epam.jdi.light.driver.WebDriverByUtils.fillByTemplate;
+import static com.epam.jdi.light.elements.init.UIFactory.$;
+import static com.epam.jdi.light.elements.init.UIFactory.$$;
+import static com.epam.jdi.light.logger.LogLevels.DEBUG;
+import static com.jdiai.tools.EnumUtils.getEnumValues;
+import static com.jdiai.tools.LinqUtils.*;
+import static java.util.Arrays.asList;
+import static org.apache.commons.lang3.StringUtils.isBlank;
 
 public class MultiDropdown extends UIListBase<UISelectAssert<?,?>>
         implements ICoreElement, HasLabel {
@@ -37,7 +38,7 @@ public class MultiDropdown extends UIListBase<UISelectAssert<?,?>>
     }
     UIElement valueText() { return root().find(value).setName("value"); }
     List<UIElement> allValues() {
-        return root().finds(values);
+        return root().finds(values).indexFromZero();
     }
 
     @JDIAction(level = DEBUG)
@@ -55,8 +56,9 @@ public class MultiDropdown extends UIListBase<UISelectAssert<?,?>>
         expand();
         for (String name : names) {
             UIElement value = value(name);
-            if (value.isEnabled())
+            if (value.isEnabled()) {
                 value.click();
+            }
         }
     }
 
@@ -68,7 +70,7 @@ public class MultiDropdown extends UIListBase<UISelectAssert<?,?>>
     public void select(int... indexes) {
         expand();
         for (int i = 1; i <= indexes.length; i++) {
-            UIElement value = $$(values, this).get(indexes[i]);
+            UIElement value = $$(values, this).setName(getName()).get(indexes[i]);
             if (value.isEnabled())
                 value.click();
         }
@@ -78,7 +80,7 @@ public class MultiDropdown extends UIListBase<UISelectAssert<?,?>>
         if (isBlank(names)) return;
         check(names.split(","));
     }
-    
+
     /**
      * Selects only particular elements
      * @param names String var arg, elements with text to select

@@ -1,4 +1,4 @@
-package org.mytests.tests.testng;
+package org.mytests.tests.test.testng;
 
 import org.testng.IAnnotationTransformer;
 import org.testng.IRetryAnalyzer;
@@ -10,10 +10,10 @@ import java.lang.reflect.Method;
 public class RetryListenerClass implements IAnnotationTransformer {
 
     @Override
-    public void transform(ITestAnnotation testannotation, Class testClass, Constructor testConstructor, Method testMethod)	{
-        IRetryAnalyzer retry = testannotation.getRetryAnalyzer();
+    public void transform(ITestAnnotation testAnnotation, Class testClass, Constructor testConstructor, Method testMethod)	{
+        IRetryAnalyzer retry = testAnnotation.getRetryAnalyzer();
         if (retry == null)	{
-            testannotation.setRetryAnalyzer(RetryFailedTestCases.class);
+            testAnnotation.setRetryAnalyzer(RetryFailedTestCases.class);
         }
 
     }
