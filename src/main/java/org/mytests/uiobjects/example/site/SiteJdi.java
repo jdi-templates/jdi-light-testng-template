@@ -14,7 +14,7 @@ import org.openqa.selenium.WebElement;
 //@JSite("https://jdi-testing.github.io/jdi-light/")
 public class SiteJdi {
     public static HomePage homePage;
-    public static JDIPerformancePage performancePage;
+//    public static JDIPerformancePage performancePage;
     public static ContactFormPage contactFormPage;
     public static ContactsPage contactsPage;
     public static DatesPage datesPage;

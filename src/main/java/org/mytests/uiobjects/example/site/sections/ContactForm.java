@@ -14,13 +14,13 @@ import static com.jdiai.tools.ReflectionUtils.isInterface;
 
 
 public class ContactForm extends Form<Contacts> {
-	TextField firstName, lastName, position, passportNumber, passportSeria;
-
-	DropdownSelect gender;
-	MultiDropdown weather;
-
-	Checkbox passport, acceptConditions;
-	TextArea description;
+//	TextField firstName, lastName, position, passportNumber, passportSeria;
+//
+//	DropdownSelect gender;
+//	MultiDropdown weather;
+//
+//	Checkbox passport, acceptConditions;
+//	TextArea description;
 
 	//jdi will find [type=submit] element in this context automatically
 	//@UI("['Submit']") public Button submit;

@@ -17,7 +17,7 @@ import static org.mytests.uiobjects.example.site.pages.ContactFormPage.contactFo
 @Listeners(TestNGListener.class)
 public class FormTests implements TestsInit {
 
-    @Test
+    @Test(groups = "Smoke")
     public void loginTest() {
         shouldBeLoggedOut();
         userIcon.click();

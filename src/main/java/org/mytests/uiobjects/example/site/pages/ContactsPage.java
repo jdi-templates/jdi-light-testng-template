@@ -13,13 +13,13 @@ import org.mytests.uiobjects.example.site.custom.MultiDropdown;
 
 @Url("/contacts.html") @Title("Contact Form")
 public class ContactsPage extends WebPage {
-	TextField firstName, lastName, position, passportNumber, passportSeria;
-
-	DropdownSelect gender;
-	MultiDropdown weather;
-
-	Checkbox passport, acceptConditions;
-	TextArea description;
+//	TextField firstName, lastName, position, passportNumber, passportSeria;
+//
+//	DropdownSelect gender;
+//	MultiDropdown weather;
+//
+//	Checkbox passport, acceptConditions;
+//	TextArea description;
 
 	@UI("['Submit']") public Button submit;
 }
