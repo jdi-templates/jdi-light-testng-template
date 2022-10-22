@@ -30,27 +30,25 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: ${{ matrix.java }}
+          distribution: 'temurin'
           java-package: jdk
+          cache: 'maven'
 
       - name: Build with Maven
         id: build
         run: mvn clean install -DskipTests -ntp
 
       - name: Start Selenoid
-        uses: n-ton4/selenoid-github-action@master
+        uses: n-ton4/selenoid-github-action@v2
         id: start-selenoid
-        with:
-          version: 1.10.1
-          args: -limit 6
-          browsers: chrome:94.0
-          last-versions: 1
+
 
       - name: Check Selenoid has been started
         run: curl http://localhost:4444/status
 
       - name: Tests
         id: functests
-        timeout-minutes: 10
+        timeout-minutes: 15
         continue-on-error: true
         run: mvn test -Pci -ntp
 
