@@ -44,14 +44,12 @@ jobs:
         if: ${{ matrix.java > 15 }}
         run: |
           echo "ASPECT_ARGS=-Daspectj.args="\"$SUREFIRE_ARGS\" >> $GITHUB_ENV
-          echo "ASPECT_ARGS_BDD=-Daspectj.args="\"$SUREFIRE_ARGS_BDD\" >> $GITHUB_ENV
 
       - name: Set parameters for AspectJ
         id: aspect_j_params_empty
         if: ${{ matrix.java < 16 }}
         run: |
           echo "ASPECT_ARGS=-Daspectj.args=''" >> $GITHUB_ENV
-          echo "ASPECT_ARGS_BDD=-Daspectj.args=''" >> $GITHUB_ENV
 
       - name: Start Selenoid
         uses: Xotabu4/selenoid-github-action@v2
@@ -65,7 +63,7 @@ jobs:
         id: functests
         timeout-minutes: 15
         continue-on-error: true
-        run: mvn test -Pci -ntp ${{ env.ASPECT_ARGS_BDD }}
+        run: mvn test -Pci -ntp ${{ env.ASPECT_ARGS }}
 
       - name: Get Allure history
         uses: actions/checkout@v3
