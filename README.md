@@ -8,14 +8,12 @@ Powered by [JDI Light](https://github.com/jdi-testing/jdi-light) and Selenium
 2. Open project in IDE (for example IntelliJIdea)
 
 3. For running demo tests:
-    * Maven: just use "mvn clean install" command http://pix.my/o/fkSH1s?1547398376
-    * IDE: run by click on "example" folder in src/test and select "Run tests" http://pix.my/o/SJtkya?1547398292
+    * Maven: just use "mvn clean install" command
+    * IDE: run by click on "example" folder in src/test and select "Run tests"
 
 4. Logs: Observe test run results in Console log
-http://pix.my/o/CEtiOQ?1547398216
 
 5. Reporting: After running tests just run **allure:serve** in maven plugins
-http://pix.my/o/5KPsyr?1547398089
 
 6. Use as template for your project: 
     * just remove all content from **src/main/.../example** folder, add your package you Page Objects
