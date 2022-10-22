@@ -25,9 +25,9 @@ jobs:
         java: [ 8, 15 ]  # doesn't work on 16
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Set up JDK ${{ matrix.java }}
-        uses: actions/setup-java@v1
+        uses: actions/setup-java@v3
         with:
           java-version: ${{ matrix.java }}
           java-package: jdk
@@ -49,7 +49,7 @@ jobs:
         run: curl http://localhost:4444/status
 
       - name: Tests
-        id: ftests
+        id: functests
         timeout-minutes: 10
         continue-on-error: true
         run: mvn test -Pci -ntp
@@ -81,3 +81,9 @@ jobs:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
+
+      - name: Check tests are passed
+        if: ${{ steps.functests.outcome != 'success' }}
+        run: |
+          echo Tests result: ${{ steps.functests.outcome }}
+          exit 1
