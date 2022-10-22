@@ -53,7 +53,7 @@ jobs:
         run: mvn test -Pci -ntp
 
       - name: Get Allure history
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         id: allure-setup
         continue-on-error: true
         with:
