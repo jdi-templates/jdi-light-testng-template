@@ -11,9 +11,10 @@ on:
   pull_request:
     branches:
       - master
-  release:
-    types: # This configuration does not affect the page_build event above
-      - created
+
+  repository_dispatch:
+    types:
+      - webhook
 
 jobs:
   build:
@@ -23,7 +24,7 @@ jobs:
       max-parallel: 1
       fail-fast: false
       matrix:
-        java: [ 8, 17 ]  # doesn't work on 16
+        java: [8, 11, 13, 14, 15, 17, 18]
 
     steps:
       - uses: actions/checkout@v3
@@ -31,7 +32,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: ${{ matrix.java }}
-          distribution: 'temurin'
+          distribution: 'zulu'
           java-package: jdk
           cache: 'maven'
 
