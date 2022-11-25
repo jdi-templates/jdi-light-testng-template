@@ -11,7 +11,9 @@ on:
   pull_request:
     branches:
       - master
-
+  release:
+    types: # This configuration does not affect the page_build event above
+      - created
   repository_dispatch:
     types:
       - webhook
@@ -24,7 +26,7 @@ jobs:
       max-parallel: 1
       fail-fast: false
       matrix:
-        java: [8, 11, 13, 14, 15, 17, 18]
+        java: [ 8, 11, 13, 14, 15, 17, 18 ]
 
     steps:
       - uses: actions/checkout@v3
@@ -35,10 +37,6 @@ jobs:
           distribution: 'zulu'
           java-package: jdk
           cache: 'maven'
-
-      - name: Build with Maven
-        id: build
-        run: mvn clean install -DskipTests -ntp
 
       - name: Set parameters for AspectJ
         id: aspect_j_params
@@ -52,27 +50,15 @@ jobs:
         run: |
           echo "ASPECT_ARGS=-Daspectj.args=''" >> $GITHUB_ENV
 
-      - name: Start Selenoid
-        uses: Xotabu4/selenoid-github-action@v2
-        id: start-selenoid
-
-
-      - name: Check Selenoid has been started
-        run: curl http://localhost:4444/status
+      - name: Build with Maven
+        id: build
+        run: mvn clean install -DskipTests -ntp
 
       - name: Tests
         id: functests
         timeout-minutes: 15
         continue-on-error: true
-        run: mvn test -Pci -ntp ${{ env.ASPECT_ARGS }}
-
-      - name: Get Allure history
-        uses: actions/checkout@v3
-        id: allure-setup
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
+        run: mvn test -ntp ${{ env.ASPECT_ARGS }} --fail-at-end
 
       - name: Generate Allure report
         uses: simple-elf/allure-report-action@master
@@ -80,19 +66,6 @@ jobs:
           allure_results: target/allure-results
           allure_report: target/allure-report
           allure_history: allure-history
-
-      - name: Upload Allure report
-        uses: actions/upload-artifact@master
-        with:
-          name: Allure report
-          path: target/allure-report
-
-      - name: Deploy Allure report to Github Pages
-        uses: peaceiris/actions-gh-pages@v2
-        env:
-          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: allure-history
 
       - name: Check tests are passed
         if: ${{ steps.functests.outcome != 'success' }}
