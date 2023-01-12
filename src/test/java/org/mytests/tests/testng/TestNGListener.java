@@ -22,9 +22,13 @@ import static com.jdiai.tools.LinqUtils.last;
 import static java.lang.System.currentTimeMillis;
 
 public class TestNGListener implements IInvokedMethodListener {
+
     private Safe<Long> start = new Safe<>(0L);
 
     private static final String UNKNOWN_ERROR = "UNKNOWN ERROR";
+    private static final String PASSED = "PASSED";
+    private static final String SKIPPED = "SKIPPED";
+    private static final String FAILED = "FAILED";
 
     @Override
     public void beforeInvocation(IInvokedMethod m, ITestResult tr) {
@@ -42,10 +46,11 @@ public class TestNGListener implements IInvokedMethodListener {
     @Override
     public void afterInvocation(IInvokedMethod method, ITestResult testResult) {
         if (method.isTestMethod()) {
-            logger.step("=== Test '%s' %s [%s] ===", TEST_NAME.get(), testResult.getName(),
+            String result = getTestResult(testResult);
+            logger.step("=== Test '%s' %s [%s] ===", TEST_NAME.get(), result,
                     new SimpleDateFormat("mm:ss.SS")
                             .format(new Date(currentTimeMillis() - start.get())));
-            if (!testResult.isSuccess()) {
+            if (FAILED.equals(result)) {
                 try {
                     takeScreen();
                 } catch (RuntimeException ignored) { }
@@ -55,6 +60,17 @@ public class TestNGListener implements IInvokedMethodListener {
                     logger.step(UNKNOWN_ERROR);
                 }
             }
+        }
+    }
+
+    private String getTestResult(ITestResult result) {
+        switch (result.getStatus()) {
+            case ITestResult.SUCCESS:
+                return PASSED;
+            case ITestResult.SKIP:
+                return SKIPPED;
+            default:
+                return FAILED;
         }
     }
 }
