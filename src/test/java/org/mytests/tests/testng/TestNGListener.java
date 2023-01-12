@@ -21,7 +21,10 @@ import static com.epam.jdi.light.settings.WebSettings.logger;
 import static com.jdiai.tools.LinqUtils.last;
 import static java.lang.System.currentTimeMillis;
 
-public class TestNGListener implements IInvokedMethodListener {    private Safe<Long> start = new Safe<>(0L);
+public class TestNGListener implements IInvokedMethodListener {
+    private Safe<Long> start = new Safe<>(0L);
+
+    private static final String UNKNOWN_ERROR = "UNKNOWN ERROR";
 
     @Override
     public void beforeInvocation(IInvokedMethod m, ITestResult tr) {
@@ -49,7 +52,7 @@ public class TestNGListener implements IInvokedMethodListener {    private Safe<
                 if (testResult.getThrowable() != null) {
                     logger.step("ERROR: " + testResult.getThrowable().getMessage());
                 } else {
-                    logger.step("UNKNOWN ERROR");
+                    logger.step(UNKNOWN_ERROR);
                 }
             }
         }
