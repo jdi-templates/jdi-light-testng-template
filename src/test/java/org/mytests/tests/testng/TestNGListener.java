@@ -37,33 +37,21 @@ public class TestNGListener implements IInvokedMethodListener {    private Safe<
     }
 
     @Override
-    public void afterInvocation(IInvokedMethod method, ITestResult tr) {
+    public void afterInvocation(IInvokedMethod method, ITestResult testResult) {
         if (method.isTestMethod()) {
-            String result = getTestResult(tr);
-            logger.step("=== Test '%s' %s [%s] ===", TEST_NAME.get(), result,
+            logger.step("=== Test '%s' %s [%s] ===", TEST_NAME.get(), testResult.getName(),
                     new SimpleDateFormat("mm:ss.SS")
                             .format(new Date(currentTimeMillis() - start.get())));
-            if ("FAILED".equals(result)) {
+            if (!testResult.isSuccess()) {
                 try {
                     takeScreen();
                 } catch (RuntimeException ignored) { }
-                if (tr.getThrowable() != null) {
-                    logger.step("ERROR: " + tr.getThrowable().getMessage());
+                if (testResult.getThrowable() != null) {
+                    logger.step("ERROR: " + testResult.getThrowable().getMessage());
                 } else {
                     logger.step("UNKNOWN ERROR");
                 }
             }
-        }
-    }
-
-    private String getTestResult(ITestResult result) {
-        switch (result.getStatus()) {
-            case ITestResult.SUCCESS:
-                return "PASSED";
-            case ITestResult.SKIP:
-                return "SKIPPED";
-            default:
-                return "FAILED";
         }
     }
 }
