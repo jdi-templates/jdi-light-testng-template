@@ -34,6 +34,15 @@
                 <driver.remote.url>http://localhost:4444/wd/hub</driver.remote.url>
             </properties>
         </profile>
+        <profile>
+            <id>jdk16</id>
+            <activation>
+                <jdk>[16, 20]</jdk>
+            </activation>
+            <properties>
+                <aspectj.args>--add-opens java.base/java.lang=ALL-UNNAMED</aspectj.args>
+            </properties>
+        </profile>
     </profiles>
 
     <dependencies>
