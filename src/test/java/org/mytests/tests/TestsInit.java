@@ -13,13 +13,13 @@ import static com.epam.jdi.light.settings.WebSettings.logger;
 @Listeners(TestNGListener.class)
 public interface TestsInit {
     @BeforeSuite(alwaysRun = true)
-    public default void setUp() {
+    default void setUp() {
         openSite(SiteJdi.class);
         logger.info("Run Tests");
     }
 
     @AfterSuite(alwaysRun = true)
-    public default void teardown() {
+    default void teardown() {
         killAllSeleniumDrivers();
     }
 }
