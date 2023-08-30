@@ -1,7 +1,6 @@
 name: Run tests
 env:
   ALLURE_VERSION: "2.10.0"
-  SUREFIRE_ARGS: "--add-opens java.base/java.lang=ALL-UNNAMED"
 
 on:
   push:
@@ -38,18 +37,6 @@ jobs:
           java-package: jdk
           cache: 'maven'
 
-      - name: Set parameters for AspectJ
-        id: aspect_j_params
-        if: ${{ matrix.java > 15 }}
-        run: |
-          echo "ASPECT_ARGS=-Daspectj.args="\"$SUREFIRE_ARGS\" >> $GITHUB_ENV
-
-      - name: Set parameters for AspectJ
-        id: aspect_j_params_empty
-        if: ${{ matrix.java < 16 }}
-        run: |
-          echo "ASPECT_ARGS=-Daspectj.args=''" >> $GITHUB_ENV
-
       - name: Build with Maven
         id: build
         run: mvn clean install -DskipTests -ntp
@@ -58,7 +45,7 @@ jobs:
         id: functests
         timeout-minutes: 15
         continue-on-error: true
-        run: mvn test -ntp ${{ env.ASPECT_ARGS }} --fail-at-end
+        run: mvn test -ntp --fail-at-end
 
       - name: Generate Allure report
         uses: simple-elf/allure-report-action@master
