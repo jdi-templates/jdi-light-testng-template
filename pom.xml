@@ -91,10 +91,15 @@
                         <suiteXmlFile>src/test/resources/general.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <argLine>
+                        -Xlog:module=debug
                         --add-opens java.base/java.lang=ALL-UNNAMED 
                         --add-opens java.base/java.util=ALL-UNNAMED
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
+                    <printSummary>true</printSummary>
+                    <reportFormat>plain</reportFormat>
+                    <useFile>false</useFile>
+                    <trimStackTrace>false</trimStackTrace>
                 </configuration>
                 <dependencies>
                     <dependency>
