@@ -92,6 +92,7 @@
                     </suiteXmlFiles>
                     <argLine>
                         -Xlog:module=debug
+                        -XX:-OmitStackTraceInFastThrow
                         --add-opens java.base/java.lang=ALL-UNNAMED 
                         --add-opens java.base/java.util=ALL-UNNAMED
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
