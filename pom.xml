@@ -37,7 +37,7 @@
         <profile>
             <id>jdk16</id>
             <activation>
-                <jdk>[16, 20]</jdk>
+                <jdk>[9, 20]</jdk>
             </activation>
             <properties>
                 <aspectj.args>--add-opens java.base/java.lang=ALL-UNNAMED</aspectj.args>
@@ -103,6 +103,8 @@
                     </suiteXmlFiles>
                     <argLine>
                         ${aspectj.args}
+                        --add-opens java.base/java.util=ALL-UNNAMED 
+                        --add-opens java.base/java.lang=ALL-UNNAMED 
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                 </configuration>
