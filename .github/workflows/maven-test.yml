@@ -45,7 +45,7 @@ jobs:
         id: functests
         timeout-minutes: 15
         continue-on-error: true
-        run: mvn test -ntp --fail-at-end
+        run: mvn test -X -e -ntp --fail-at-end
 
       - name: Generate Allure report
         uses: simple-elf/allure-report-action@master
